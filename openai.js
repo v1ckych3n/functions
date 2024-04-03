@@ -1,29 +1,29 @@
-import OpenAI from "openai"
+// import OpenAI from "openai"
 
-require("dotenv").config();
+// require("dotenv").config();
 
-const openAIClient = new OpenAI({
-  apiKey: process.env['OpenAI_API_KEY']
-})
+// const openAIClient = new OpenAI({
+//   apiKey: process.env['OpenAI_API_KEY']
+// })
 
-const chatCompletion = await openAIClient.chat.completions.create({
-  model : "gpt-4-turbo-preview",
-  messages : [
-    {
-      role : "system",
-      content : "You are a helpful assistant."
-    },
-    {
-      role : "user",
-      content : "What is the meaning of life?"
-    }
-  ]
-})
+// const chatCompletion = await openAIClient.chat.completions.create({
+//   model : "gpt-4-turbo-preview",
+//   messages : [
+//     {
+//       role : "system",
+//       content : "You are a helpful assistant."
+//     },
+//     {
+//       role : "user",
+//       content : "What is the meaning of life?"
+//     }
+//   ]
+// })
 
-const Chat = async () => {
+// const Chat = async () => {
   
-  return <span></span>
-}
+//   return <span></span>
+// }
 
 // const { Configuration, OpenAIApi } = require("openai")
 // const configuration = new Configuration({
