@@ -25,13 +25,16 @@
 //   return <span></span>
 // }
 
+const { Configuration, OpenAIApi } = require("openai")
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY
+})
+const openai = new OpenAIApi(configuration)
+
 
 const form = document.getElementById('chat-form');
 const mytextInput = document.getElementById('mytext');
 const responseTextarea = document.getElementById('response');
-
-
-const API_KEY = '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';
 
 
 form.addEventListener('submit', async (e) => {
