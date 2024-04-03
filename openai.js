@@ -36,22 +36,14 @@
 
 import OpenAI from "openai";
 
-const openai = new OpenAI();
-
-async function main() {
-  const completion = await openai.chat.completions.create({
-    messages: [{ role: "system", content: "You are a helpful assistant." }],
-    model: "gpt-4",
-  });
-
-  console.log(completion.choices[0]);
-}
-
-main();
+const openAIClient = new OpenAI({
+  apiKey: process.env['OPENAI_API_KEY']
+})
 
 const form = document.getElementById('chat-form');
 const mytextInput = document.getElementById('mytext');
 const responseTextarea = document.getElementById('response');
+
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
