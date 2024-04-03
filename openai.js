@@ -30,11 +30,8 @@ const form = document.getElementById('chat-form');
 const mytextInput = document.getElementById('mytext');
 const responseTextarea = document.getElementById('response');
 
-const openAIClient = new OpenAI({
-  apiKey: process.env['OPENAI_API_KEY']
-})
 
-// const API_KEY = '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';
+const API_KEY = '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';
 
 
 form.addEventListener('submit', async (e) => {
