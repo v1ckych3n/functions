@@ -30,8 +30,11 @@ const form = document.getElementById('chat-form');
 const mytextInput = document.getElementById('mytext');
 const responseTextarea = document.getElementById('response');
 
+const openAIClient = new OpenAI({
+  apiKey: process.env['OPENAI_API_KEY']
+})
 
-const API_KEY = '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';
+// const API_KEY = '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';
 
 
 form.addEventListener('submit', async (e) => {
@@ -48,8 +51,7 @@ form.addEventListener('submit', async (e) => {
         },
         body: JSON.stringify({
           model: 'gpt-4',
-          // messages: [{ role: 'user', content: mytext }],
-          messages: [{ role:'user', content: `'${mytext}'`}],
+          messages: [{ role: 'user', content: mytext }],
           temperature: 1.0,
           top_p: 0.7,
           n: 1,
@@ -61,7 +63,7 @@ form.addEventListener('submit', async (e) => {
 
       if (response.ok) {
         const data = await response.json();
-        responseTextarea.value = data.choices[0].message.content;
+        responseTextarea.value = data.choices[0].text;
       } else {
         responseTextarea.value = 'Error: Unable to process your request.';
       }
