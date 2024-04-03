@@ -7,10 +7,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="assets/style.css" rel="stylesheet">
-        <link href="assets/reset.css" rel="stylesheet">
+        <!-- <link href="assets/reset.css" rel="stylesheet"> -->
         <script defer src="assets/arena.js"></script>
     </head>
     <body>
-        
+        <div>
+            <h1>ChatGPT 4 API Test</h1>
+            <form id="chat-form">
+                <label for="mytext">Enter your message:</label>
+                <input type="text" id="mytext" style="width: 50%;" required>
+                <button type="submit">Submit</button>
+            </form>
+            
+            <div>
+                <h2>Response:</h2>
+                <textarea id="response" rows="20" style="width: 80%;" readonly></textarea>
+            </div>
+        </div>
+
+        <script src="openai.js"></script>
     </body>
 </html>
