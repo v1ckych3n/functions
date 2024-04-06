@@ -7,11 +7,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="assets/style.css" rel="stylesheet">
+        <link href="assets/style_to-do.css" rel="stylesheet">
+        <script src="openai.js"></script>
+        <!-- <script src="openai-test.js"></script> -->
         <!-- <link href="assets/reset.css" rel="stylesheet"> -->
     </head>
 
     <body>
-        <div class="left-column">
+
+        <!-- ChatGPT -->
+        <!-- <div class="left-column">
             <h1>AI Goal Setter</h1>
             <form id="chat-form">
                 <label for="mytext">Enter your message:</label>
@@ -23,12 +28,25 @@
                 <h2>Response:</h2>
                 <textarea id="response" rows="20" style="width: 80%;" readonly></textarea>
             </div>
-        </div>
+        </div> -->
 
-        <div class="right-column">
-            <h2>To-Do List</h2>
-        </div>
+        <!-- To-Do -->
+        <div class="right-column_to-do">
+            <div class="status_no-status">
+                <h2>No Status</h2>
+            </div>
 
-        <script src="openai.js"></script>
+            <div class="status_not-started">
+                <h2>Not Started</h2>
+            </div>
+
+            <div class="status_in-progress">
+                <h2>In-Progress</h2>
+            </div>
+
+            <div class="status_completed">
+                <h2>Completed</h2>
+            </div>
+        </div>
     </body>
 </html>

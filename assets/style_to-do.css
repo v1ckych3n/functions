@@ -1,0 +1,14 @@
+.right-column_to-do {
+    width: 75vw;
+    height: 80vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.status_no-status, .status_not-started, .status_in-progress, .status_completed {
+    width: 25%;
+    background-color: aliceblue;
+}
