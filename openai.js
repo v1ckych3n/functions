@@ -1,5 +1,4 @@
 // import OpenAI from "openai"
-
 // require("dotenv").config();
 
 // const openAIClient = new OpenAI({
@@ -27,23 +26,30 @@
 
 
 
-// (There's seems to be no API connection?)
-// const { Configuration, OpenAIApi } = require("openai")
-// const configuration = new Configuration({
-//   apiKey: process.env.OPENAI_API_KEY
+
+
+// import OpenAI from "openai";
+
+// const openAIClient = new OpenAI({
+//   apiKey: process.env['OPENAI_API_KEY']
 // })
-// const openai = new OpenAIApi(configuration)
 
-import OpenAI from "openai";
 
-const openAIClient = new OpenAI({
-  apiKey: process.env['OPENAI_API_KEY']
-})
+
+// const { Configuration, OpenAIApi } = required("openai")
+// const configuration = new Configuration ({
+//   apiKey: "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"
+// })
+
+
+const API_KEY = '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';
+
+
+// JAVASCRIPT FUNCTION SECTION //
 
 const form = document.getElementById('chat-form');
 const mytextInput = document.getElementById('mytext');
 const responseTextarea = document.getElementById('response');
-
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -73,7 +79,8 @@ form.addEventListener('submit', async (e) => {
         const data = await response.json();
         responseTextarea.value = data.choices[0].text;
       } else {
-        responseTextarea.value = 'Error: Unable to process your request.';
+        // responseTextarea.value = 'Error: Unable to process your request.';
+        responseTextarea.value = 'Hi there!';
       }
     } catch (error) {
       console.error(error);
