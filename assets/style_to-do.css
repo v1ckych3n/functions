@@ -14,5 +14,24 @@
 
 .status_no-status, .status_not-started, .status_in-progress, .status_completed {
     width: 25%;
-    background-color: aliceblue;
+    background-color: var(--background-color);
+    
+}
+
+
+
+/* TABLET MEDIA QUERY */
+/* TABLET MEDIA QUERY */
+/* TABLET MEDIA QUERY */
+@media (min-width: 768px) {
+
+}
+
+
+
+/* DESKTOP MEDIA QUERY */
+/* DESKTOP MEDIA QUERY */
+/* DESKTOP MEDIA QUERY */
+@media (min-width: 1280px) {
+
 }

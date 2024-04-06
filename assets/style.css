@@ -1,4 +1,40 @@
+@font-face {
+    font-family: Nohemi-Regular;
+    src: url(/assets/fonts/Nohemi-Regular.otf);
+}
+
+:root {
+    --primary-font: Nohemi-Regular;
+
+    /* color styles */
+    --background-color: #fcf6ef;
+    --primary-color: #000000;
+
+    --outline-stroke: var(--primary-color) 1px solid;
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+}
+
+
+
+/* TABLET MEDIA QUERY */
+/* TABLET MEDIA QUERY */
+/* TABLET MEDIA QUERY */
+@media (min-width: 768px) {
+
+}
+
+
+
+/* DESKTOP MEDIA QUERY */
+/* DESKTOP MEDIA QUERY */
+/* DESKTOP MEDIA QUERY */
+@media (min-width: 1280px) {
+
 }
