@@ -5,12 +5,14 @@
 
 :root {
     --primary-font: Nohemi-Regular;
+    --font-size: 1rem;
 
     /* color styles */
     --background-color: #fcf6ef;
     --primary-color: #000000;
 
-    --outline-stroke: var(--primary-color) 1px solid;
+    --outline: var(--primary-color) 1px solid;
+    --gap: 1rem;
 }
 
 body {
@@ -19,6 +21,11 @@ body {
 
     background-color: var(--background-color);
     font-family: var(--primary-font);
+    font-size: var(--font-size);
+}
+
+h2 {
+    font-size: calc(var(--font-size) * 1.75);
 }
 
 
