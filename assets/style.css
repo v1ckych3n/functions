@@ -11,6 +11,7 @@
     --background-color: rgba(246, 235, 224, 1);
     --semi-transparent_background-color: rgba(246, 235, 224, .25);
     --primary-color: rgba(41, 41, 41, 1);
+    --secondary-color: rgba(255, 255, 255, 1);
 
     --outline: var(--primary-color) 1px solid;
     --blur: blur(15px);
@@ -35,7 +36,8 @@ h2 {
 .gradient-blob_background {
     position: fixed;
     z-index: -1;
-    right: -25rem;
+    top: 10rem;
+    right: -10rem;
 }
 
 
@@ -52,5 +54,8 @@ h2 {
 /* DESKTOP MEDIA QUERY */
 /* DESKTOP MEDIA QUERY */
 @media (min-width: 1280px) {
-
+    .gradient-blob_background {
+        top: 0rem;
+        right: -20rem;
+    }
 }

@@ -26,12 +26,13 @@
     
     text-transform: uppercase;
     outline: var(--outline);
-    
 }
 
 .status_not-started > header, .status_no-status > header, .status_in-progress > header, .status_completed > header{
     border-bottom: var(--outline);
     padding: var(--gap);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 
