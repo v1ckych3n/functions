@@ -32,6 +32,13 @@ h2 {
     font-size: calc(var(--font-size) * 1.75);
 }
 
+button {
+    background-color: var(--secondary-color);
+    padding: var(--gap);
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
 
 .gradient-blob_background {
     position: fixed;
