@@ -8,10 +8,12 @@
     --font-size: 1rem;
 
     /* color styles */
-    --background-color: #fcf6ef;
-    --primary-color: #000000;
+    --background-color: rgba(246, 235, 224, 1);
+    --semi-transparent_background-color: rgba(246, 235, 224, .25);
+    --primary-color: rgba(41, 41, 41, 1);
 
     --outline: var(--primary-color) 1px solid;
+    --blur: blur(15px);
     --gap: 1rem;
 }
 
@@ -22,12 +24,19 @@ body {
     background-color: var(--background-color);
     font-family: var(--primary-font);
     font-size: var(--font-size);
+    color: var(--primary-color);
 }
 
 h2 {
     font-size: calc(var(--font-size) * 1.75);
 }
 
+
+.gradient-blob_background {
+    position: fixed;
+    z-index: -1;
+    right: -25rem;
+}
 
 
 /* TABLET MEDIA QUERY */

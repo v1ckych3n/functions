@@ -20,11 +20,18 @@
 
 .status_no-status, .status_not-started, .status_in-progress, .status_completed {
     width: 100%;
-    padding: var(--gap);
-    background-color: var(--background-color);
+    height: 100%;
+    background-color: var(--semi-transparent_background-color);
+    backdrop-filter: blur(10px);
     
     text-transform: uppercase;
     outline: var(--outline);
+    
+}
+
+.status_not-started > header, .status_no-status > header, .status_in-progress > header, .status_completed > header{
+    border-bottom: var(--outline);
+    padding: var(--gap);
 }
 
 
@@ -54,10 +61,5 @@
     
     .status_no-status, .status_not-started, .status_in-progress, .status_completed {
         width: 25%;
-        padding: var(--gap);
-        background-color: var(--background-color);
-        
-        text-transform: uppercase;
-        outline: var(--outline);
     }
 }
