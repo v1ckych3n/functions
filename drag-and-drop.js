@@ -1,3 +1,4 @@
+// Drag and Drop function that allows user to drag a to-do item from one column to the next //
 const todos = document.querySelectorAll(".todos");
 const status = document.querySelectorAll(".status");
 let dragTodo = null;
@@ -37,21 +38,16 @@ function dragEnter() {
 }
 
 function dragLeave() {
-    this.style.backgroundColor = "none";
+    this.style.backgroundColor = "transparent";
 
     console.log("dragLeave");
 }
 
 function dragDrop() {
     this.appendChild(dragTodo);
-    this.style.backgroundColor = "none";
+    this.style.backgroundColor = "transparent";
 
     console.log("dragDrop");
 }
-
-
-
-
-
 
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //

@@ -43,7 +43,7 @@
 .status > header {
     border-bottom: var(--outline);
     padding: var(--gap);
-    background-color: var(--primary-color);
+    background-color: var(--background-color);
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
 }
