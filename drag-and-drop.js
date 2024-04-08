@@ -86,15 +86,21 @@ function createToDo() {
     const input_val = document.getElementById("to-do_input").value;
     const text = document.createTextNode(input_val);
 
-    todos_div = appendChild(text);
-    todos_div.classList.add("todo");
+    todos_div.appendChild(text);
+    todos_div.classList.add("todos");
     todos_div.setAttribute("draggable", "true");
 
     const span = document.createElement("span");
-    const span_text = document.createTextNode("/u00D7");
+    const span_text = document.createTextNode("\u00D7");
+    span.classList.add("close-toggle");
     span.appendChild(span_text);
 
-    console.log(span);
+    todos_div.appendChild(span);
+    no_status.appendChild(todos_div);
+
+    popup_form.classList.remove("active");
+
+    console.log(todos_div);
 }
 
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //

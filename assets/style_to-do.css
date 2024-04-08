@@ -70,7 +70,7 @@
 }
 
 /* Add To-Do Popup styles */
-.popup {
+/* .popup {
     width: 35vw;
     height: auto;
     background-color: var(--white-color);
@@ -78,10 +78,27 @@
     outline: var(--outline);
 
     position: fixed;
-    /* top: -50%;
-    left: 50%; */
     z-index: 100;
     transition: top 0.3s ease-in-out;
+} */
+
+.popup {
+    width: 35vw;
+    height: auto;
+    position: fixed;
+    top: -50%;
+    left: 50%;
+    z-index: 1000;
+    
+    transform: translate(-50%, -50%);
+    transition: top 0.3s ease-in-out;
+    outline: var(--outline);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+}
+
+.popup.active {
+    top: 35vh;
 }
 
 .popup_header {
