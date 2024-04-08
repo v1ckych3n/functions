@@ -14,13 +14,16 @@
 
     /* color styles */
     --background-color: rgba(242, 242, 242, 1);
-    --primary-color: rgba(255, 86, 49, 1);
+    /* --primary-color: rgba(255, 86, 49, 1); */
     --secondary-color: rgba(255, 255, 255, 1);
+    --black-color: rgba(0, 0, 0, 1);
+    --white-color: rgba(255, 255, 255, 1);
 
-    --outline: var(--primary-color) 1px solid;
+    /* decorative styles */
+    --outline: var(--black-color) 1px solid;
     --blur: blur(5px);
     --gap: 1rem;
-    --border-radius: 10px;
+    --border-radius: 5px;
 }
 
 body {
@@ -30,7 +33,7 @@ body {
     background-color: var(--background-color);
     font-family: var(--primary-font);
     font-size: var(--font-size);
-    color: var(--primary-color);
+    color: var(--black-color);
 }
 
 h2 {
