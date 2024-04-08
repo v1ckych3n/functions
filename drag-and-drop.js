@@ -1,5 +1,6 @@
 const todos = document.querySelectorAll(".todos");
 const status = document.querySelectorAll(".status");
+let dragTodo = null;
 
 todos.forEach((todos) => {
     todos.addEventListener("dragstart", dragStart);
@@ -7,10 +8,12 @@ todos.forEach((todos) => {
 });
 
 function dragStart() {
+    dragTodo = this;
     console.log("dragStart");
 }
 
 function dragEnd() {
+    dragTodo = null;
     console.log("dragEnd");
 }
 
@@ -22,7 +25,8 @@ status.forEach((status) => {
     status.addEventListener("drop", dragDrop);
 })
 
-function dragOver() {
+function dragOver(e) {
+    e.preventDefault();
     console.log("dragOver");
 }
 
@@ -34,6 +38,10 @@ function dragLeave() {
     console.log("dragLeave");
 }
 
+function dragDrop() {
+    this.appendChild(dragTodo);
+    console.log("dragDrop");
+}
 
 
 
