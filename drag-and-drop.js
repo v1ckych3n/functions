@@ -31,15 +31,21 @@ function dragOver(e) {
 }
 
 function dragEnter() {
+    this.style.backgroundColor = "blue";
+    
     console.log("dragEnter");
 }
 
 function dragLeave() {
+    this.style.backgroundColor = "none";
+
     console.log("dragLeave");
 }
 
 function dragDrop() {
     this.appendChild(dragTodo);
+    this.style.backgroundColor = "none";
+
     console.log("dragDrop");
 }
 
