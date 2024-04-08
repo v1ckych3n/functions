@@ -52,6 +52,7 @@ function dragDrop() {
 
 // Add to-do items popup window //
 const popup = document.querySelectorAll("[data-target-popup]");
+const close_popup = document.querySelectorAll(".close_popup");
 
 popup.forEach((popup) => {
     popup.addEventListener("click", () => {
@@ -59,5 +60,11 @@ popup.forEach((popup) => {
         overlay.classList.remove("active");
     });
 });
+
+close_popup.forEach((popup) => {
+    popup.addEventListener("click", () => {
+        const
+    })
+}
 
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
