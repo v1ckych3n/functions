@@ -69,7 +69,7 @@ close_popup.forEach((popup) => {
     })
 });
 
-popup_window.onclick = (event) => {
+popup.onclick = (event) => {
     if (event.target == overlay) {
         const popup = document.querySelectorAll(".popup");
         popup.forEach((popup) => popup.classList.remove("active"));
@@ -87,6 +87,14 @@ function createToDo() {
     const text = document.createTextNode(input_val);
 
     todos_div = appendChild(text);
+    todos_div.classList.add("todo");
+    todos_div.setAttribute("draggable", "true");
+
+    const span = document.createElement("span");
+    const span_text = document.createTextNode("/u00D7");
+    span.appendChild(span_text);
+
+    console.log(span);
 }
 
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
