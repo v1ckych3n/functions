@@ -82,7 +82,11 @@ const todo_submit = document.getElementById("todo_submit");
 todo_submit.addEventListener("click", createToDo);
 
 function createToDo() {
-    
+    const todos_div = document.createElement("div");
+    const input_val = document.getElementById("to-do_input").value;
+    const text = document.createTextNode(input_val);
+
+    todos_div = appendChild(text);
 }
 
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
