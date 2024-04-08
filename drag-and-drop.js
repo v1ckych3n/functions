@@ -108,6 +108,7 @@ function createToDo() {
     console.log(todos_div);
 }
 
+// removing the "+ Add To-Do" popup window //
 const remove_pop_up = document.getElementById("close-pop-up");
 
 remove_pop_up.addEventListener("click", closePop);
