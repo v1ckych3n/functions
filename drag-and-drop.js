@@ -50,7 +50,7 @@ function dragDrop() {
     console.log("dragDrop");
 }
 
-// Add to-do items popup window //
+// Add to-do items popup window appears when clicked on the "+ Add To Do" button//
 const popup = document.querySelectorAll("[data-target-popup]");
 const close_popup = document.querySelectorAll(".close_popup");
 
@@ -63,8 +63,18 @@ popup.forEach((popup) => {
 
 close_popup.forEach((popup) => {
     popup.addEventListener("click", () => {
-        const
+        const popup = popup.closest(".popup");
+        popup.classList.remove("active");
+        overlay.classList.remove("active");
     })
+});
+
+popup_window.onclick = (event) => {
+    if (event.target == overlay) {
+        const popup = document.querySelectorAll(".popup");
+        popup.forEach((popup) => popup.classList.remove("active"));
+        overlay.classList.remove("active");
+    }
 }
 
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
