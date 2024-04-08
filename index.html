@@ -34,12 +34,12 @@
         <!-- To-Do -->
         <div class="right-column_to-do">
             <div class="to-do_container">
-                <div class="status no-status" id="no_status">
+                <div class="status no-status">
                     <header>
                         <h2>No Status</h2>
                     </header>
 
-                    <div class="to-do-items">
+                    <div class="to-do-items" id="no_status">
                         <button id="add-button" data-target-popup="#popup">+ Add To Do</button>
                         <div class="todos" draggable="true">
                             <p>Work on Typography and Interaction Coding :(</p>
@@ -71,7 +71,7 @@
             <div class="popup" id="popup">
                 <div class="popup_header">
                     <h2>Add a To-Do Item</h2>
-                    <button class="popup_close-button close_popup">&times;</button>
+                    <button class="popup_close-button close_popup" id="close-pop-up">&times;</button>
                 </div>
                 
                 <div class="popup_content">
@@ -79,8 +79,6 @@
                     <input type="submit" value="Add To-Do" id="todo_submit">
                 </div>
             </div>
-
-            <div id="overlay"></div>
         </div>
 
 

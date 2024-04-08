@@ -53,6 +53,7 @@ function dragDrop() {
 // Add to-do items popup window appears when clicked on the "+ Add To Do" button//
 const popup = document.querySelectorAll("[data-target-popup]");
 const close_popup = document.querySelectorAll(".close_popup");
+const overlay = document.getElementById("overlay");
 
 popup.forEach((popup) => {
     popup.addEventListener("click", () => {
@@ -98,9 +99,21 @@ function createToDo() {
     todos_div.appendChild(span);
     no_status.appendChild(todos_div);
 
+    todos_div.addEventListener("dragstart", dragStart);
+    todos_div.addEventListener("dragend", dragEnd);
+
     popup_form.classList.remove("active");
+    overlay.classList.remove("active");
 
     console.log(todos_div);
+}
+
+const remove_pop_up = document.getElementById("close-pop-up");
+
+remove_pop_up.addEventListener("click", closePop);
+
+function closePop() {
+    remove_pop_up.parentElement.parentElement.classList.remove('active')
 }
 
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
