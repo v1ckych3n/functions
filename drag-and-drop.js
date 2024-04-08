@@ -77,4 +77,8 @@ popup_window.onclick = (event) => {
     }
 }
 
+const todo_submit = document.getElementById("todo_submit");
+
+todo_submit.addEventListener
+
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //

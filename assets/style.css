@@ -51,11 +51,6 @@ h2 {
     text-transform: uppercase;
 }
 
-input {
-    outline: var(--outline);
-    padding: calc(var(--gap) * .75);
-}
-
 .gradient-blob_background {
     position: fixed;
     z-index: -1;
