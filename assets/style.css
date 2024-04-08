@@ -3,19 +3,24 @@
     src: url(/assets/fonts/Nohemi-Regular.otf);
 }
 
+@font-face {
+    font-family: Printvetica;
+    src: url(/assets/fonts/Printvetica.otf);
+}
+
 :root {
-    --primary-font: Nohemi-Regular;
+    --primary-font: Printvetica;
     --font-size: 1rem;
 
     /* color styles */
-    --background-color: rgba(246, 235, 224, 1);
-    --semi-transparent_background-color: rgba(246, 235, 224, .25);
-    --primary-color: rgba(41, 41, 41, 1);
+    --background-color: rgba(242, 242, 242, 1);
+    --primary-color: rgba(255, 86, 49, 1);
     --secondary-color: rgba(255, 255, 255, 1);
 
     --outline: var(--primary-color) 1px solid;
-    --blur: blur(15px);
+    --blur: blur(5px);
     --gap: 1rem;
+    --border-radius: 10px;
 }
 
 body {
@@ -30,14 +35,6 @@ body {
 
 h2 {
     font-size: calc(var(--font-size) * 1.75);
-}
-
-button {
-    background-color: var(--secondary-color);
-    padding: var(--gap);
-    width: 100%;
-    height: auto;
-    text-align: center;
 }
 
 .gradient-blob_background {
