@@ -8,8 +8,14 @@
     src: url(/assets/fonts/Printvetica.otf);
 }
 
+@font-face {
+    font-family: Monaspace Neon;
+    src: url(/assets/fonts/MonaspaceNeonVarVF[wght\,wdth\,slnt].ttf);
+}
+
 :root {
-    --primary-font: Printvetica;
+    --primary-font: Monaspace Neon;
+    --heading-font: Printvetica;
     --font-size: 1rem;
 
     /* color styles */
@@ -24,6 +30,9 @@
     --blur: blur(5px);
     --gap: 1rem;
     --border-radius: 5px;
+
+    /* animation styles */
+    --hover-effect: ease-in-out 250ms;
 }
 
 body {
@@ -31,13 +40,15 @@ body {
     grid-template-columns: 1fr 1fr;
 
     background-color: var(--background-color);
-    font-family: var(--primary-font);
     font-size: var(--font-size);
+    font-family: var(--primary-font);
     color: var(--black-color);
 }
 
 h2 {
+    font-family: var(--heading-font);
     font-size: calc(var(--font-size) * 1.75);
+    text-transform: uppercase;
 }
 
 .gradient-blob_background {

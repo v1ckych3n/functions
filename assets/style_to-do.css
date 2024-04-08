@@ -21,7 +21,7 @@
     width: 90vw;
     height: 90vh;
     padding: var(--gap);
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, .25);
 
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
 .status_no-status, .status_not-started, .status_in-progress, .status_completed {
     width: 100%;
     height: 100%;
-    background-color: rgba(242, 242, 242, .5);
+    background-color: rgba(242, 242, 242, .25);
     backdrop-filter: var(--blur);
     
     outline: var(--outline);
@@ -52,7 +52,7 @@
     padding: var(--gap);
 } */
 
-.to-dos {
+.todos {
     border-bottom: var(--outline);
     padding: var(--gap);
     display: flex;
@@ -84,7 +84,9 @@
 /* DESKTOP MEDIA QUERY */
 @media (min-width: 1280px) {
     #add-button:hover {
-
+        background-color: var(--black-color);
+        color: var(--white-color);
+        transition: var(--hover-effect);
     }
     
     .to-do_container {
@@ -99,5 +101,15 @@
     
     .status_no-status, .status_not-started, .status_in-progress, .status_completed {
         width: 25%;
+    }
+
+    .close-toggle {
+        cursor: pointer;
+    }
+
+    .close-toggle:hover {
+        background-color: var(--black-color);
+        color: var(--white-color);
+        transition: var(--hover-effect);
     }
 }
