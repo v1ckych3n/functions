@@ -4,6 +4,8 @@
     width: 100%;
     height: auto;
     text-align: center;
+    border-bottom: var(--outline);
+    text-transform: uppercase;
 }
 
 .right-column_to-do {
@@ -34,7 +36,6 @@
     background-color: rgba(242, 242, 242, .5);
     backdrop-filter: var(--blur);
     
-    text-transform: uppercase;
     outline: var(--outline);
     border-radius: var(--border-radius);
 }
@@ -50,6 +51,23 @@
 /* .to-do-items {
     padding: var(--gap);
 } */
+
+.to-dos {
+    border-bottom: var(--outline);
+    padding: var(--gap);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-toggle {
+    outline: var(--outline);
+    /* border-radius: 100rem; */
+    width: 1.5rem;
+    height: 1rem;
+    text-align: center;
+}
 
 
 /* TABLET MEDIA QUERY */
