@@ -56,7 +56,7 @@ const close_popup = document.querySelectorAll(".close_popup");
 
 popup.forEach((popup) => {
     popup.addEventListener("click", () => {
-        document.querySelector(popup.dataset.target).classList.add("active");
+        document.querySelector(popup.dataset.targetPopup).classList.add("active");
         overlay.classList.remove("active");
     });
 });
