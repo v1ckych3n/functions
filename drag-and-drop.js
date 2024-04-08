@@ -50,4 +50,14 @@ function dragDrop() {
     console.log("dragDrop");
 }
 
+// Add to-do items popup window //
+const popup = document.querySelectorAll("[data-target-popup]");
+
+popup.forEach((popup) => {
+    popup.addEventListener("click", () => {
+        document.querySelector(popup.dataset.target).classList.add("active");
+        overlay.classList.remove("active");
+    });
+});
+
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //

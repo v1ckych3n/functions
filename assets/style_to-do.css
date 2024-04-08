@@ -69,6 +69,37 @@
     text-align: center;
 }
 
+/* Add To-Do Popup styles */
+.popup {
+    width: 35vw;
+    height: auto;
+    background-color: var(--white-color);
+    border-radius: var(--border-radius);
+    outline: var(--outline);
+
+    position: fixed;
+    top: 30vh;
+    z-index: 100;
+}
+
+.popup_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: var(--gap);
+
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
+
+.popup_content {
+    padding: var(--gap);
+}
+
+.popup_close-button {
+    font-size: calc(var(--font-size) * 1.5);
+}
+
 
 /* TABLET MEDIA QUERY */
 /* TABLET MEDIA QUERY */
