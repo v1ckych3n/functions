@@ -110,8 +110,8 @@ function createToDo() {
 
     document.getElementById("to-do_input").value = "";
 
-    // popup_form.classList.remove("active");
-    // overlay.classList.remove("active");
+    const popup = document.getElementById("popup");
+    popup.classList.remove("active");
 
     deleteToDo.forEach(button => {
         span.addEventListener("click", () => {
@@ -139,5 +139,14 @@ deleteToDo.forEach(button => {
     });
 });
 
-
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
+
+
+// saving the inserted To Do tasks //
+const storeParams = () => {
+    let formParams = new FormData(formElement)
+
+    formParams.forEach((value, key) => {
+        localStorage.setItem(key, value)
+    });
+}
