@@ -55,6 +55,8 @@
 .todos {
     border-bottom: var(--outline);
     padding: var(--gap);
+
+    position: relative;
     display: flex;
     flex-direction: row;
     column-gap: var(--gap);

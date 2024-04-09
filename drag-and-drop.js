@@ -10,12 +10,17 @@ todos.forEach((todos) => {
 
 function dragStart() {
     dragTodo = this;
-    this.style.display = "none";
+    setTimeout(() => {
+        this.style.display = "none";
+    }, 0);
     console.log("dragStart");
 }
 
 function dragEnd() {
     dragTodo = null;
+    setTimeout(() => {
+        this.style.display = "";
+    }, 0);
     console.log("dragEnd");
 }
 
