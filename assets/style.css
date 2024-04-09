@@ -51,11 +51,36 @@ h2 {
     text-transform: uppercase;
 }
 
-.gradient-blob_background {
+/* .gradient-blob_background {
     position: fixed;
     z-index: -1;
     top: 10rem;
     right: -10rem;
+} */
+
+.pixel-cat {
+    width: 100px;
+    height: auto;
+
+    position: fixed;
+    bottom: 3rem;
+    left: 3rem;
+
+    animation: glitch infinite 1s;
+}
+
+@keyframes glitch {
+    0% {
+        margin-bottom: 0;
+    }
+
+    50% {
+        margin-bottom: 5px;
+    }
+
+    100% {
+        margin-bottom: 0;
+    }
 }
 
 
