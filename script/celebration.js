@@ -17,6 +17,9 @@ celebrationTime.addEventListener('dragover', (event) => {
 });
 
 celebrationTime.addEventListener('drop', () => {
-    jsConfetti.addConfetti()
+    jsConfetti.addConfetti({
+        confettiRadius: 6,
+        confettiNumber: 1000,
+    })
 });
 
