@@ -9,14 +9,15 @@
     src: url(/assets/fonts/Printvetica.otf);
 } */
 
-/* @font-face {
+@font-face {
     font-family: Monaspace Neon;
     src: url(/assets/fonts/MonaspaceNeonVarVF[wght\,wdth\,slnt].ttf);
-} */
+}
 
 :root {
     --primary-font: Helvetica;
     --heading-font: Helvetica;
+    --motivational-buddy_font: Monaspace Neon;
     --font-size: 1rem;
 
     /* color styles */
@@ -62,6 +63,11 @@ h2 {
 
 .motivational-buddy {
     position: relative;
+}
+
+.motivational-buddy_quotes {
+    font-family: Monaspace Neon;
+    font-weight: 500;
 }
 
 .pixel-cat {
