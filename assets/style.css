@@ -90,6 +90,10 @@ h2 {
     }
 }
 
+.pixelated-speech-bubble_container {
+    position: relative;
+}
+
 .pixelated-speech-bubble {
     width: 200px;
     height: auto;
@@ -98,6 +102,18 @@ h2 {
     bottom: 10rem;
     left: 4rem;
     z-index: 1000;
+}
+
+.pixelated-speech-bubble_container > p {
+    width: 175px;
+    height: auto;
+
+    position: fixed;
+    z-index: 1001;
+
+    bottom: 15rem;
+    left: 6.5rem;
+    
 }
 
 .confetti-button {
