@@ -60,6 +60,10 @@ h2 {
     right: -10rem;
 } */
 
+.motivational-buddy {
+    position: relative;
+}
+
 .pixel-cat {
     width: 100px;
     height: auto;
@@ -84,6 +88,16 @@ h2 {
     100% {
         margin-bottom: 0;
     }
+}
+
+.pixelated-speech-bubble {
+    width: 200px;
+    height: auto;
+    
+    position: fixed;
+    bottom: 10rem;
+    left: 4rem;
+    z-index: 1000;
 }
 
 .confetti-button {
