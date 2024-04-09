@@ -3,19 +3,20 @@
     src: url(/assets/fonts/Nohemi-Regular.otf);
 }
 
-@font-face {
+/* FIGURE OUT WHY THE TYPEFACE DOESN'T WORK ON PUBLISHED SITE */
+/* @font-face {
     font-family: Printvetica;
     src: url(/assets/fonts/Printvetica.otf);
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: Monaspace Neon;
     src: url(/assets/fonts/MonaspaceNeonVarVF[wght\,wdth\,slnt].ttf);
-}
+} */
 
 :root {
-    --primary-font: Monaspace Neon;
-    --heading-font: Printvetica;
+    --primary-font: Helvetica;
+    --heading-font: Helvetica;
     --font-size: 1rem;
 
     /* color styles */
@@ -47,6 +48,7 @@ body {
 
 h2 {
     font-family: var(--heading-font);
+    font-weight: 600;
     font-size: calc(var(--font-size) * 1.75);
     text-transform: uppercase;
 }
