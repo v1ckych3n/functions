@@ -105,6 +105,12 @@ function createToDo() {
     // popup_form.classList.remove("active");
     // overlay.classList.remove("active");
 
+    deleteToDo.forEach(button => {
+        span.addEventListener("click", () => {
+            span.parentElement.style.display = "none";
+        });
+    });
+
     console.log(todos_div);
 }
 
@@ -114,7 +120,16 @@ const remove_pop_up = document.getElementById("close-pop-up");
 remove_pop_up.addEventListener("click", closePop);
 
 function closePop() {
-    remove_pop_up.parentElement.parentElement.classList.remove('active')
+    remove_pop_up.parentElement.parentElement.classList.remove('active');
 }
+
+const deleteToDo = document.querySelectorAll(".close-toggle");
+
+deleteToDo.forEach(button => {
+    button.addEventListener("click", () => {
+        button.parentElement.style.display = "none";
+    });
+});
+
 
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
