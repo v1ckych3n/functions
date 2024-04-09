@@ -10,6 +10,7 @@ todos.forEach((todos) => {
 
 function dragStart() {
     dragTodo = this;
+    this.style.display = "none";
     console.log("dragStart");
 }
 
@@ -101,6 +102,8 @@ function createToDo() {
 
     todos_div.addEventListener("dragstart", dragStart);
     todos_div.addEventListener("dragend", dragEnd);
+
+    document.getElementById("to-do_input").value = "";
 
     // popup_form.classList.remove("active");
     // overlay.classList.remove("active");
