@@ -53,8 +53,9 @@
 } */
 
 .todos {
-    border-bottom: var(--outline);
+    outline: var(--outline);
     padding: var(--gap);
+    background-color: var(--background-color);
 
     position: relative;
     display: flex;

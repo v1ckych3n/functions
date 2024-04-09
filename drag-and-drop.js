@@ -38,7 +38,7 @@ function dragOver(e) {
 }
 
 function dragEnter() {
-    this.style.backgroundColor = "blue";
+    this.style.backgroundColor = "black";
     
     console.log("dragEnter");
 }

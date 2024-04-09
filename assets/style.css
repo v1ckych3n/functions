@@ -65,6 +65,7 @@ h2 {
     position: fixed;
     bottom: 3rem;
     left: 3rem;
+    z-index: 1000;
 
     animation: glitch infinite 1s;
 }
@@ -81,6 +82,18 @@ h2 {
     100% {
         margin-bottom: 0;
     }
+}
+
+.confetti-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+
+    outline: var(--outline);
+    background: var(--black-color);
+    color: var(--white-color);
+    padding: var(--gap);
+    cursor: pointer;
 }
 
 

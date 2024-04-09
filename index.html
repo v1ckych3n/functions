@@ -8,15 +8,19 @@
 
         <link href="assets/style.css" rel="stylesheet">
         <link href="assets/style_to-do.css" rel="stylesheet">
-        <script src="openai.js"></script>
-        <!-- <script src="openai-test.js"></script> -->
         <link href="assets/reset.css" rel="stylesheet">
+
+        <!-- <script src="openai.js"></script> -->
+        <!-- <script src="openai-test.js"></script> -->
     </head>
 
     <body>
         <!-- <img src="assets/images/yellow.svg" alt="happy yellow blob" class="gradient-blob_background"> -->
 
         <img src="assets/images/cat.svg" alt="pixelated cat" class="pixel-cat">
+        
+        <button class="confetti-button" id="confettiButton">You Did It!</button>
+        <canvas id="confetti"></canvas>
 
         <!-- ChatGPT -->
         <!-- <div class="left-column">
@@ -66,7 +70,7 @@
                     <div class="to-do-items"></div>
                 </div>
     
-                <div class="status completed">
+                <div class="status completed" id="celebrationTime">
                     <header>
                         <h2>Completed</h2>
                     </header>
@@ -91,5 +95,7 @@
 
 
         <script src="drag-and-drop.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+        <script src="script/celebration.js"></script>
     </body>
 </html>
