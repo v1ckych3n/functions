@@ -102,8 +102,8 @@ function createToDo() {
     todos_div.addEventListener("dragstart", dragStart);
     todos_div.addEventListener("dragend", dragEnd);
 
-    popup_form.classList.remove("active");
-    overlay.classList.remove("active");
+    // popup_form.classList.remove("active");
+    // overlay.classList.remove("active");
 
     console.log(todos_div);
 }

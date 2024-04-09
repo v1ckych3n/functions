@@ -57,31 +57,24 @@
     padding: var(--gap);
     display: flex;
     flex-direction: row;
+    column-gap: var(--gap);
     justify-content: space-between;
     align-items: center;
+}
+
+.todos > p:first-child {
+    width: 100%;
 }
 
 .close-toggle {
     outline: var(--outline);
     /* border-radius: 100rem; */
-    width: 1.5rem;
+    width: 1rem;
     height: 1rem;
     text-align: center;
 }
 
 /* Add To-Do Popup styles */
-/* .popup {
-    width: 35vw;
-    height: auto;
-    background-color: var(--white-color);
-    border-radius: var(--border-radius);
-    outline: var(--outline);
-
-    position: fixed;
-    z-index: 100;
-    transition: top 0.3s ease-in-out;
-} */
-
 .popup {
     width: 35vw;
     height: auto;
@@ -91,7 +84,7 @@
     z-index: 1000;
     
     transform: translate(-50%, -50%);
-    transition: top 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     outline: var(--outline);
     border-radius: var(--border-radius);
     background-color: var(--background-color);
