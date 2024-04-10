@@ -61,6 +61,10 @@ h2 {
     right: -10rem;
 } */
 
+.moving-buddy {
+    position: absolute;
+}
+
 .motivational-buddy {
     position: relative;
 }
