@@ -21,7 +21,7 @@ const renderQuotes = (data) => {
 }
 
 
-fetch('motivational-buddy.json')
+fetch('/script/motivational-buddy.json')
     .then(response => response.json())
     .then(data => {
         renderItems(data)
