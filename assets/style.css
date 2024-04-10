@@ -1,18 +1,18 @@
-@font-face {
+/* FIGURE OUT WHY THE TYPEFACE DOESN'T WORK ON PUBLISHED SITE */
+/* @font-face {
     font-family: Nohemi-Regular;
     src: url(/assets/fonts/Nohemi-Regular.otf);
-}
+} */
 
-/* FIGURE OUT WHY THE TYPEFACE DOESN'T WORK ON PUBLISHED SITE */
 /* @font-face {
     font-family: Printvetica;
     src: url(/assets/fonts/Printvetica.otf);
 } */
 
-@font-face {
+/* @font-face {
     font-family: Monaspace Neon;
     src: url(/assets/fonts/MonaspaceNeonVarVF[wght\,wdth\,slnt].ttf);
-}
+} */
 
 :root {
     --primary-font: Helvetica;
