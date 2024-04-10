@@ -1,5 +1,5 @@
 const renderQuotes = (data) => {
-    const motivationalQuotes = document.getElementById("motivation-quotes")
+    const motivationalQuotes = document.getElementById("motivational-quotes")
 
     data.forEach((item) => {
         let conditionalClass = ''
@@ -26,3 +26,4 @@ fetch('motivational-buddy.json')
     .then(data => {
         renderItems(data)
     })
+    
