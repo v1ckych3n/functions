@@ -1,25 +1,3 @@
-// const renderQuotes = (data) => {
-//     const motivationalQuotes = document.getElementById("motivational-quotes")
-
-//     data.forEach((item) => {
-//         let conditionalClass = ''
-
-//         // need to look up what !item.alsoWasWriter //
-//         if (!item.alsoWasWriter) {
-//             conditionalClass = 'none';
-//         }
-        
-//         let listItem =
-//         `
-//             <li class="${conditionalClass}>
-//                 <p class="motivational-buddy_quotes">{$item.quote}</p>
-//             </li>
-//         `
-    
-//         motivationalQuotes.insertAdjacentHTML('beforeend', listItem)
-//     })
-// }
-
 const renderItems = (data) => {
 	// The `ul` where the items will be inserted
 	const dataList = document.getElementById('motivational-quotes')
@@ -51,9 +29,3 @@ fetch('script/motivational-buddy.json')
         renderItems(data);
         console.log(data);
     });
-
-
-// MAKE MY BUDDY MOVE //
-// dragElement(document.getElementById ("moving-buddy"));
-
-// function dragElement(mov)
