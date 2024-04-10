@@ -34,17 +34,11 @@ const renderItems = (data) => {
 
 		// Make a “template literal” as we have before, inserting your data (and maybe the class)
 		let listItem =
-			`
-				<li class="${conditionalClass}">
-					<h2>${item.title}</h2>
-					<img src="${item.posterImage}">
-					<p>Released in <time>${item.year}</time></p>
-					<p><em>${item.runTime}</em></p>
-					<a href="${item.imdbLink}">
-						<p>${item.imdbRating} / 10 →</p>
-					</a>
-				</li>
-			`
+        `
+            <li class="${conditionalClass}>
+                <p class="motivational-buddy_quotes">${item.quote}</p>
+            </li>
+        `
 
 		dataList.insertAdjacentHTML('beforeend', listItem) // Add it to the `ul`!
 	})
@@ -60,6 +54,6 @@ fetch('script/motivational-buddy.json')
 
 
 // MAKE MY BUDDY MOVE //
-dragElement(document.getElementById ("moving-buddy"));
+// dragElement(document.getElementById ("moving-buddy"));
 
-function dragElement(mov)
+// function dragElement(mov)

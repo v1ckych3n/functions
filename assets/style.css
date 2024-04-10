@@ -61,17 +61,14 @@ h2 {
     right: -10rem;
 } */
 
-.moving-buddy {
+#moving-buddy {
     position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 .motivational-buddy {
     position: relative;
-}
-
-.motivational-buddy_quotes {
-    font-family: var(--motivational-buddy_font);
-    font-weight: 500;
 }
 
 .pixel-cat {
@@ -114,16 +111,20 @@ h2 {
     z-index: 1000;
 }
 
-.pixelated-speech-bubble_container > p {
-    width: 175px;
+.motivational-buddy_quotes {
+    font-family: var(--motivational-buddy_font);
+    font-weight: 500;
+
+    width: 150px;
     height: auto;
 
     position: fixed;
     z-index: 1001;
 
-    bottom: 15rem;
+    bottom: 14rem;
     left: 6.5rem;
     
+    list-style-type: none;
 }
 
 .confetti-button {
