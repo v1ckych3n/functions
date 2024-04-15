@@ -50,10 +50,6 @@
     border-top-right-radius: var(--border-radius);
 }
 
-/* .to-do-items {
-    padding: var(--gap);
-} */
-
 .todos {
     outline: var(--outline);
     padding: var(--gap);
@@ -189,6 +185,10 @@
     
     .status_no-status, .status_not-started, .status_in-progress, .status_completed {
         width: 25%;
+    }
+
+    .todos {
+        cursor: pointer;
     }
 
     .close-toggle {
