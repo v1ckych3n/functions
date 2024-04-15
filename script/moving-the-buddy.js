@@ -3,10 +3,9 @@ dragElement(document.getElementById ("moving-buddy"));
 
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    if (document.getElementById(elmnt.id + "handle")) {
-        document.getElementById(elmnt.id + "handle").onmousedown = dragMouseDown;
-    }
-    else {
+    if (document.getElementById(elmnt.id + "-handle")) {
+        document.getElementById(elmnt.id + "-handle").onmousedown = dragMouseDown;
+    } else {
         elmnt.onmousedown = dragMouseDown;
     }
 
