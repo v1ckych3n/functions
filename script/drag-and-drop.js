@@ -97,6 +97,24 @@ function createToDo() {
     todos_div.classList.add("todos");
     todos_div.setAttribute("draggable", "true");
 
+
+    // adding the up and down toggle button for mobile media query //
+    // const toggleButton = document.createElement("div");
+    // toggleButton.className = "toggle-button";
+    // const upArrow = document.createElement("p");
+    // upArrow.className = "up-arrow";
+    // upArrow.innerHTML = '&#8963;';
+    // const downArrow = document.createElement("p");
+    // downArrow.className = "down-arrow";
+    // downArrow.innerHTML = '&#8963;';
+    // toggleArrow.appendChild(upArrow);
+    // toggleArrow.appendChild(downArrow);
+
+    // todos_div.appendChild(toggleArrow);
+
+
+
+    // delete "x" button //
     const span = document.createElement("span");
     const span_text = document.createTextNode("\u00D7");
     span.classList.add("close-toggle");
