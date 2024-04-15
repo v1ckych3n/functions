@@ -99,19 +99,6 @@ function createToDo() {
 
 
     // adding the up and down toggle button for mobile media query //
-    // const toggleButton = document.createElement("div");
-    // toggleButton.className = "toggle-button";
-    // const upArrow = document.createElement("p");
-    // upArrow.className = "up-arrow";
-    // upArrow.innerHTML = '&#8963;';
-    // const downArrow = document.createElement("p");
-    // downArrow.className = "down-arrow";
-    // downArrow.innerHTML = '&#8963;';
-    // toggleArrow.appendChild(upArrow);
-    // toggleArrow.appendChild(downArrow);
-
-    // todos_div.appendChild(toggleArrow);
-
 
 
     // delete "x" button //
