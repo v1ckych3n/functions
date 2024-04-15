@@ -24,7 +24,6 @@ function dragEnd() {
     console.log("dragEnd");
 }
 
-
 status.forEach((status) => {
     status.addEventListener("dragover", dragOver);
     status.addEventListener("dragenter", dragEnter);
@@ -55,6 +54,17 @@ function dragDrop() {
 
     console.log("dragDrop");
 }
+
+// trying something with the up/down buttons
+
+let downButton = document.querySelectorAll('.down-arrow')
+
+downButton.forEach((press_downButton) => {
+    press_downButton.onclick = () => {
+        console.log("you clicked down!")
+    
+    }
+})
 
 // Add to-do items popup window appears when clicked on the "+ Add To Do" button//
 const popup = document.querySelectorAll("[data-target-popup]");
@@ -147,11 +157,18 @@ deleteToDo.forEach(button => {
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
 
 
-// saving the inserted To Do tasks //
-const storeParams = () => {
-    let formParams = new FormData(formElement)
 
-    formParams.forEach((value, key) => {
-        localStorage.setItem(key, value)
-    });
-}
+// Toggle up and down button feature for MOBILE //
+
+
+
+
+
+// saving the inserted To Do tasks //
+// const storeParams = () => {
+//     let formParams = new FormData(formElement)
+
+//     formParams.forEach((value, key) => {
+//         localStorage.setItem(key, value)
+//     });
+// }

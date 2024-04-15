@@ -57,11 +57,11 @@
 
                     <div class="to-do-items" id="no_status">
                         <button id="add-button" data-target-popup="#popup">+ Add To Do</button>
-                        
+
                         <div class="todos" draggable="true">
-                            <div class="toggle-button">
-                                <p class="up-arrow">&#8963;</p>
-                                <p class="down-arrow">&#8963;</p>
+                            <div class="toggle-button todos-mobile">
+                                <button class="up-arrow">&#8963;</button>
+                                <button class="down-arrow">&#8963;</button>
                             </div>
 
                             <div class="todos_content">
@@ -108,6 +108,8 @@
                     <input type="text" id="to-do_input">
                     <input type="submit" value="Add To-Do" id="todo_submit">
                 </div>
+
+                <div id="overlay"></div>
             </div>
         </div>
 
@@ -116,5 +118,7 @@
         <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
         <script src="script/celebration.js"></script>
         <script src="script/motivational-buddy.js"></script>
+
+        
     </body>
 </html>
