@@ -52,7 +52,6 @@
 
 .todos {
     outline: var(--outline);
-    padding: var(--gap);
     background-color: var(--background-color);
 
     position: relative;
@@ -61,11 +60,27 @@
 }
 
 .toggle-button {
-    
+    display: flex;
+    flex-direction: column;
+    column-gap: var(--gap);
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    background: var(--black-color);
+    color: var(--white-color);
+    font-size: calc(var(--font-size) * 1.5);
+    padding: calc(var(--gap) * .5);
+}
+
+.down-arrow {
+    rotate: 180deg;
+    border-bottom: 1px white solid;
 }
 
 .todos_content {
     width: 100%;
+    padding: var(--gap);
 
     position: relative;
     display: flex;
@@ -197,6 +212,15 @@
 
     .todos {
         cursor: pointer;
+        padding: var(--gap);
+    }
+
+    .toggle-button {
+        display: none;
+    }
+
+    .todos_content {
+        padding: 0;
     }
 
     .close-toggle {
