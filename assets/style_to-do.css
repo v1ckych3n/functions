@@ -57,14 +57,22 @@
 
     position: relative;
     display: flex;
+    column-gap: var(--gap);
+}
+
+.toggle-button {
+    
+}
+
+.todos_content {
+    width: 100%;
+
+    position: relative;
+    display: flex;
     flex-direction: row;
     column-gap: var(--gap);
     justify-content: space-between;
     align-items: center;
-}
-
-.todos > p:first-child {
-    width: 100%;
 }
 
 .close-toggle {
