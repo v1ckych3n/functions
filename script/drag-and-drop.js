@@ -60,7 +60,7 @@ function dragDrop() {
 
 
 
-// FUNCTION TWO: Add to-do items popup window appears when clicked on the "+ Add To Do" button//
+// FUNCTION TWO (MOST IMPORTANT): Add to-do items popup window appears when clicked on the "+ Add To Do" button//
 const popup = document.querySelectorAll("[data-target-popup]");
 const close_popup = document.querySelectorAll(".close_popup");
 const overlay = document.getElementById("overlay");
@@ -150,6 +150,11 @@ function createToDo() {
     console.log(todoDiv);
 }
 
+// Toggle up and down button feature for MOBILE ONLY //
+
+
+
+
 
 // FUNCTION THREE:Removing the "+ Add To-Do" popup window //
 const remove_pop_up = document.getElementById("close-pop-up");
@@ -170,9 +175,8 @@ deleteToDo.forEach(button => {
 });
 
 
+
+// CREDITS //
 // shoutout to Rodrigo for helping me figure out that there needs to be two .parentElement //
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY (for creating the draggable todos item//
 
-
-
-// Toggle up and down button feature for MOBILE //
