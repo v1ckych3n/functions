@@ -176,11 +176,16 @@
     background-color: var(--black-color);
     color: var(--white-color);
     width: 100%;
-    padding: calc(var(--gap) * .25);
+    padding: var(--gap);
+    /* padding: calc(var(--gap) * .25); */
     outline: var(--outline);
     text-transform: uppercase;
     text-align: center;
 }
+
+
+
+
 
 /* TABLET MEDIA QUERY */
 /* TABLET MEDIA QUERY */
@@ -188,6 +193,8 @@
 @media (min-width: 768px) {
 
 }
+
+
 
 
 
