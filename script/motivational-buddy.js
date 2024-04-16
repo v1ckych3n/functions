@@ -1,5 +1,21 @@
 const renderQuote = (data) => {
-	
+	const quoteElement = document.getElementById('motivational-quotes');
+
+	if (data.length > 0) {
+		const generateQuote = Math.floor(Math.random() * data.length);
+		const selectedQuote = data[randomIndex];
+
+		let conditionalClass = '';
+		if (!item.quote) {
+			conditionalClass ='faded'
+		}
+
+		quoteElement.innerHTML = 
+			`
+				<li class="${conditionalClass}">
+					<p class="motivational-buddy_quotes">${item.quote}</p>
+			`
+	}
 }
 
 
