@@ -1,5 +1,6 @@
 // MVP FEATURE JAVASCRIPT //
 
+
 // FUNCTION ONE: Drag and Drop function that allows user to drag a to-do item from one column to the next //
 const todos = document.querySelectorAll(".todos");
 const status = document.querySelectorAll(".status");
@@ -60,6 +61,7 @@ function dragDrop() {
 
 
 
+
 // FUNCTION TWO (MOST IMPORTANT): Add to-do items popup window appears when clicked on the "+ Add To Do" button//
 const popup = document.querySelectorAll("[data-target-popup]");
 const close_popup = document.querySelectorAll(".close_popup");
@@ -93,8 +95,8 @@ const todo_submit = document.getElementById("todo_submit");
 todo_submit.addEventListener("click", createToDo);
 
 
-// Creating new todo content //
 
+// Creating new todo content //
 function createToDo() {
     const todoContainer = document.getElementById("no_status");
     const inputVal = document.getElementById("to-do_input").value;
@@ -143,9 +145,11 @@ function createToDo() {
         todoDiv.style.display = "none";
     });
 
+
     // I need to close the popup overlay after inputing the content //
     document.getElementById("popup").classList.remove("active");
     document.getElementById("overlay").classList.add("active");
+
 
     // Toggle up and down button feature for MOBILE ONLY //
     upArrowButton.addEventListener("click", function() {
@@ -164,6 +168,7 @@ function createToDo() {
 
     console.log("I just created a new todo item!");
 }
+
 
 
 
@@ -188,7 +193,8 @@ deleteToDo.forEach(button => {
 
 
 
+
+
 // CREDITS //
 // shoutout to Rodrigo for helping me figure out that there needs to be two .parentElement //
 // credits: https://www.youtube.com/watch?v=m3StLl-H4CY (for creating the draggable todos item//
-
