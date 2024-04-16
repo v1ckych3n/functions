@@ -61,10 +61,6 @@ h2 {
     right: -10rem;
 } */
 
-#moving-buddy {
-    display: none;
-}
-
 .confetti-button {
     position: fixed;
     top: 10px;
@@ -86,6 +82,8 @@ h2 {
 /* TABLET MEDIA QUERY */
 @media (min-width: 768px) {
     #moving-buddy {
+        display: block;
+
         position: absolute;
         left: 0;
         bottom: 0;
