@@ -3,6 +3,23 @@ const todos = document.querySelectorAll(".todos");
 const status = document.querySelectorAll(".status");
 let dragTodo = null;
 
+// if (todoItem.class == 'todos') {
+//     let todoItem =
+//     `
+//         <div class="toggle-button todos-mobile">
+//             <button class="up-arrow">&#8963;</button>
+//             <button class="down-arrow">&#8963;</button>
+//         </div>
+
+//         <div class="todos_content">
+//             <p>Get started by adding your first to-do item :)</p>
+//             <p class="close-toggle">&times;</p>
+//         </div>
+//     `
+//     channelBlocks.insertAdjacentHTML('beforeend', todoItem)
+// }
+
+
 todos.forEach((todos) => {
     todos.addEventListener("dragstart", dragStart);
     todos.addEventListener("dragend", dragEnd);
@@ -55,16 +72,29 @@ function dragDrop() {
     console.log("dragDrop");
 }
 
-// trying something with the up/down buttons
+// Up and Down Buttons to Toggle switching the order //
 
-let downButton = document.querySelectorAll('.down-arrow')
+let downButton = document.querySelectorAll('.down-arrow');
 
 downButton.forEach((press_downButton) => {
     press_downButton.onclick = () => {
-        console.log("you clicked down!")
-    
+        let todoItem = press_downButton.parentNode;
+        let nextStatusSection = todoItem.nextElementSibling;
+
+        if (nextStatusSection && nextStatusSection.tagName === 'DIV') {
+            let currentStatus = todoItem.getAttribute('data-status');
+            let nextStatus = nextStatusSection.getAttribute('data-status');
+
+            if (currentStatus === 'not-started' && nextStatus === 'in-progress') {
+                todoItem.setAttribute('data-status', nextStatus);
+                nextStatusSection.appendChild(todoItem);
+            } else if (currentStatus === 'in-progress' && nextStatus === 'completed') {
+                todoItem.setAttribute('data-status', nextStatus);
+                nextStatusSection.appendChild(todoItem);
+            }
+        }
     }
-})
+});
 
 // Add to-do items popup window appears when clicked on the "+ Add To Do" button//
 const popup = document.querySelectorAll("[data-target-popup]");
@@ -98,44 +128,64 @@ const todo_submit = document.getElementById("todo_submit");
 
 todo_submit.addEventListener("click", createToDo);
 
+
+// Creating new todo content //
+
 function createToDo() {
-    const todos_div = document.createElement("div");
-    const input_val = document.getElementById("to-do_input").value;
-    const text = document.createTextNode(input_val);
+    const todoContainer = document.getElementById("no_status");
+    const inputVal = document.getElementById("to-do_input").value;
 
-    todos_div.appendChild(text);
-    todos_div.classList.add("todos");
-    todos_div.setAttribute("draggable", "true");
-
-
-    // adding the up and down toggle button for mobile media query //
+    const todoDiv = document.createElement("div");
+    todoDiv.classList.add("todos");
+    todoDiv.setAttribute("draggable", "true");
 
 
-    // delete "x" button //
-    const span = document.createElement("span");
-    const span_text = document.createTextNode("\u00D7");
-    span.classList.add("close-toggle");
-    span.appendChild(span_text);
+    // Recreate the .todos content with the up and down arrows //
+    const toggleButtonDiv = document.createElement("div");
+    toggleButtonDiv.classList.add("toggle-button", "todos-mobile");
+    const upArrowButton = document.createElement("button");
+    upArrowButton.classList.add("up-arrow");
+    upArrowButton.innerHTML = "&#8963;";
+    const downArrowButton = document.createElement("button");
+    downArrowButton.classList.add("down-arrow");
+    downArrowButton.innerHTML = "&#8963;";
+    toggleButtonDiv.appendChild(upArrowButton);
+    toggleButtonDiv.appendChild(downArrowButton);
+    todoDiv.appendChild(toggleButtonDiv);
 
-    todos_div.appendChild(span);
-    no_status.appendChild(todos_div);
+    
+    // Creating the content here when input value //
+    const contentDiv = document.createElement("div");
+    contentDiv.classList.add("todos_content");
 
-    todos_div.addEventListener("dragstart", dragStart);
-    todos_div.addEventListener("dragend", dragEnd);
+    const textP = document.createElement("p");
+    textP.textContent = inputVal;
+
+    const closeSpan = document.createElement("span");
+    closeSpan.classList.add("close-toggle");
+    closeSpan.textContent = "\u00D7";
+    contentDiv.appendChild(textP);
+    contentDiv.appendChild(closeSpan);
+    todoDiv.appendChild(contentDiv);
+    todoContainer.appendChild(todoDiv);
+
 
     document.getElementById("to-do_input").value = "";
 
-    const popup = document.getElementById("popup");
-    popup.classList.remove("active");
+    todoDiv.addEventListener("dragstart", dragStart);
+    todoDiv.addEventListener("dragend", dragEnd);
 
-    deleteToDo.forEach(button => {
-        span.addEventListener("click", () => {
-            span.parentElement.style.display = "none";
-        });
+    closeSpan.addEventListener("click", function() {
+        todoDiv.style.display = "none";
     });
 
-    console.log(todos_div);
+    // I need to close the popup overlay after inputing the content //
+    document.getElementById("popup").classList.remove("active");
+    document.getElementById("overlay").classList.add("active");
+
+    console.log(todoDiv);
 }
+
 
 // removing the "+ Add To-Do" popup window //
 const remove_pop_up = document.getElementById("close-pop-up");
@@ -145,6 +195,7 @@ remove_pop_up.addEventListener("click", closePop);
 function closePop() {
     remove_pop_up.parentElement.parentElement.classList.remove('active');
 }
+
 
 const deleteToDo = document.querySelectorAll(".close-toggle");
 
