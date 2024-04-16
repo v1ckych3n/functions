@@ -1,24 +1,9 @@
+// MVP FEATURE JAVASCRIPT //
+
 // Drag and Drop function that allows user to drag a to-do item from one column to the next //
 const todos = document.querySelectorAll(".todos");
 const status = document.querySelectorAll(".status");
 let dragTodo = null;
-
-// if (todoItem.class == 'todos') {
-//     let todoItem =
-//     `
-//         <div class="toggle-button todos-mobile">
-//             <button class="up-arrow">&#8963;</button>
-//             <button class="down-arrow">&#8963;</button>
-//         </div>
-
-//         <div class="todos_content">
-//             <p>Get started by adding your first to-do item :)</p>
-//             <p class="close-toggle">&times;</p>
-//         </div>
-//     `
-//     channelBlocks.insertAdjacentHTML('beforeend', todoItem)
-// }
-
 
 todos.forEach((todos) => {
     todos.addEventListener("dragstart", dragStart);
@@ -72,29 +57,7 @@ function dragDrop() {
     console.log("dragDrop");
 }
 
-// Up and Down Buttons to Toggle switching the order //
 
-let downButton = document.querySelectorAll('.down-arrow');
-
-downButton.forEach((press_downButton) => {
-    press_downButton.onclick = () => {
-        let todoItem = press_downButton.parentNode;
-        let nextStatusSection = todoItem.nextElementSibling;
-
-        if (nextStatusSection && nextStatusSection.tagName === 'DIV') {
-            let currentStatus = todoItem.getAttribute('data-status');
-            let nextStatus = nextStatusSection.getAttribute('data-status');
-
-            if (currentStatus === 'not-started' && nextStatus === 'in-progress') {
-                todoItem.setAttribute('data-status', nextStatus);
-                nextStatusSection.appendChild(todoItem);
-            } else if (currentStatus === 'in-progress' && nextStatus === 'completed') {
-                todoItem.setAttribute('data-status', nextStatus);
-                nextStatusSection.appendChild(todoItem);
-            }
-        }
-    }
-});
 
 // Add to-do items popup window appears when clicked on the "+ Add To Do" button//
 const popup = document.querySelectorAll("[data-target-popup]");
@@ -212,16 +175,3 @@ deleteToDo.forEach(button => {
 
 
 // Toggle up and down button feature for MOBILE //
-
-
-
-
-
-// saving the inserted To Do tasks //
-// const storeParams = () => {
-//     let formParams = new FormData(formElement)
-
-//     formParams.forEach((value, key) => {
-//         localStorage.setItem(key, value)
-//     });
-// }
