@@ -8,17 +8,26 @@
 
         <link href="assets/style.css" rel="stylesheet">
         <link href="assets/style_to-do.css" rel="stylesheet">
+        <link href="assets/style_motivational-buddy.css" rel="stylesheet">
         <link href="assets/reset.css" rel="stylesheet">
-
-        <!-- <script src="openai.js"></script> -->
-        <!-- <script src="openai-test.js"></script> -->
     </head>
 
     <body>
         <!-- <img src="assets/images/yellow.svg" alt="happy yellow blob" class="gradient-blob_background"> -->
 
+        <!-- MOTIVATIONAL BUDDY -->
         <div class="motivational-buddy" id="moving-buddy">
-            <div id="moving-buddy-handle">
+            <img src="assets/images/cat.svg" alt="pixelated cat" class="pixel-cat">
+            <div class="pixelated-speech-bubble_container">
+                <img src="assets/images/speech-bubble.svg" alt="pixelated speech bubble" class="pixelated-speech-bubble">
+                <div class="motivational-buddy_quotes">
+                    <p id="motivational-quotes"></p>
+                 </div>
+            </div>
+        </div>
+
+
+            <!-- <div id="moving-buddy-handle">
                 <img src="assets/images/cat.svg" alt="pixelated cat" class="pixel-cat">
                 <div class="pixelated-speech-bubble_container">
                     <img src="assets/images/speech-bubble.svg" alt="pixelated speech bubble" class="pixelated-speech-bubble">
@@ -26,13 +35,18 @@
                         <p id="motivational-quotes"></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         
+
+
+        <!-- CONFETTI! -->
         <!-- <button class="confetti-button" id="confettiButton">You Did It!</button>
         <canvas id="confetti"></canvas> -->
 
-        <!-- ChatGPT -->
+
+
+        <!-- CHATGPT (next steps) -->
         <!-- <div class="left-column">
             <h1>AI Goal Setter</h1>
             <form id="chat-form">
@@ -47,7 +61,9 @@
             </div>
         </div> -->
 
-        <!-- To-Do -->
+
+
+        <!-- TO-DO -->
         <div class="right-column_to-do">
             <div class="to-do_container">
                 <div class="status no-status">
@@ -97,6 +113,7 @@
                 </div>
             </div>
 
+
             <!-- Add To-Do Item Popups -->
             <div class="popup" id="popup">
                 <div class="popup_header">
@@ -114,11 +131,20 @@
         </div>
 
 
+
+        <!-- JAVASCRIPT LINKING -->
+
+        <!-- TO-DO FUNCTION -->
         <script src="script/drag-and-drop.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
         <script src="script/celebration.js"></script>
+
+        <!-- MOTIVATIONAL BUDDY -->
         <script src="script/motivational-buddy.js"></script>
 
-        
+
+        <!-- CHATGPT -->
+        <!-- <script src="openai.js"></script> -->
+        <!-- <script src="openai-test.js"></script> -->
     </body>
 </html>
