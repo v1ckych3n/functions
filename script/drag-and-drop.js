@@ -147,23 +147,23 @@ function createToDo() {
     document.getElementById("popup").classList.remove("active");
     document.getElementById("overlay").classList.add("active");
 
-    console.log(todoDiv);
+    // Toggle up and down button feature for MOBILE ONLY //
+    upArrowButton.addEventListener("click", function() {
+        let currentDiv = this.parentElement.parentElement;
+        if (currentDiv.previousElementSibling) {
+            currentDiv.parentNode.insertBefore(currentDiv, currentDiv.previousElementSibling);
+        }
+    });
+
+    downArrowButton.addEventListener("click", function() {
+        let currentDiv = this.parentElement.parentElement;
+        if (currentDiv.nextElementSibling) {
+            currentDiv.parentNode.insertBefore(currentDiv.nextElementSibling, currentDiv);
+        }
+    });
+
+    console.log("I just created a new todo item!");
 }
-
-// Toggle up and down button feature for MOBILE ONLY //
-upArrowButton.addEventListener("click", function() {
-    let currentDiv = this.parentElement.parentElement;
-    if (currentDiv.previousElementSibling) {
-        currentDiv.parentNode.insertBefore(currentDiv, currentDiv.previousElementSibling);
-    }
-});
-
-downArrowButton.addEventListener("click", function() {
-    let currentDiv = this.parentElement.parentElement;
-    if (currentDiv.previousElementSibling) {
-        currentDiv.parentNode.insertBefore(curr)
-    }
-})
 
 
 
