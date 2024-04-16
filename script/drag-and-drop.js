@@ -1,6 +1,6 @@
 // MVP FEATURE JAVASCRIPT //
 
-// Drag and Drop function that allows user to drag a to-do item from one column to the next //
+// FUNCTION ONE: Drag and Drop function that allows user to drag a to-do item from one column to the next //
 const todos = document.querySelectorAll(".todos");
 const status = document.querySelectorAll(".status");
 let dragTodo = null;
@@ -59,7 +59,8 @@ function dragDrop() {
 
 
 
-// Add to-do items popup window appears when clicked on the "+ Add To Do" button//
+
+// FUNCTION TWO: Add to-do items popup window appears when clicked on the "+ Add To Do" button//
 const popup = document.querySelectorAll("[data-target-popup]");
 const close_popup = document.querySelectorAll(".close_popup");
 const overlay = document.getElementById("overlay");
@@ -150,7 +151,7 @@ function createToDo() {
 }
 
 
-// removing the "+ Add To-Do" popup window //
+// FUNCTION THREE:Removing the "+ Add To-Do" popup window //
 const remove_pop_up = document.getElementById("close-pop-up");
 
 remove_pop_up.addEventListener("click", closePop);
