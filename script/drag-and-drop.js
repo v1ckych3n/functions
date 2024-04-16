@@ -205,7 +205,9 @@ deleteToDo.forEach(button => {
     });
 });
 
-// credits: https://www.youtube.com/watch?v=m3StLl-H4CY //
+
+// shoutout to Rodrigo for helping me figure out that there needs to be two .parentElement //
+// credits: https://www.youtube.com/watch?v=m3StLl-H4CY (for creating the draggable todos item//
 
 
 
