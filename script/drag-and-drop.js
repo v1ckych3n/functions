@@ -151,7 +151,19 @@ function createToDo() {
 }
 
 // Toggle up and down button feature for MOBILE ONLY //
+upArrowButton.addEventListener("click", function() {
+    let currentDiv = this.parentElement.parentElement;
+    if (currentDiv.previousElementSibling) {
+        currentDiv.parentNode.insertBefore(currentDiv, currentDiv.previousElementSibling);
+    }
+});
 
+downArrowButton.addEventListener("click", function() {
+    let currentDiv = this.parentElement.parentElement;
+    if (currentDiv.previousElementSibling) {
+        currentDiv.parentNode.insertBefore(curr)
+    }
+})
 
 
 
