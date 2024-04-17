@@ -165,8 +165,18 @@ function createToDo() {
 
 
     // Toggle up and down button feature for MOBILE ONLY //
+    upArrowButton.addEventListener("click", function() {
+        moveTodoDiv(this.parentElement.parentElement, 'down');
+    });
+
+    downArrowButton.addEventListener("click", function() {
+        moveTodoDiv(this.parentElement.parentElement, 'down');
+    });
+
+
     // upArrowButton.addEventListener("click", function() {
     //     let currentDiv = this.parentElement.parentElement;
+
     //     if (currentDiv.previousElementSibling) {
     //         currentDiv.parentNode.insertBefore(currentDiv, currentDiv.previousElementSibling);
     //     }
@@ -178,8 +188,19 @@ function createToDo() {
     //         currentDiv.parentNode.insertBefore(currentDiv.nextElementSibling, currentDiv);
     //     }
     // });
+}
 
-    
+function moveTodoDiv(todoDiv, direction) {
+    const statusDivs = Array.from(document.querySelectorAll('.to-do-items'));
+    const currentStatusIndex = statusDivs.indexOf(todoDiv.parentElement);
+
+    if (direction === 'up' && currentStatusIndex > 0) {
+        statusDivs[currentStatusIndex - 1].appendChild(todoDiv);
+    }
+
+    else if (direction === 'down' && currentStatusIndex < statusDivs.length - 1) {
+        statusDivs[currentStatusIndex + 1].insertBefore(todoDiv, statusDivs[currentStatusIndex + 1].firstChild);
+    }
 }
 
 
