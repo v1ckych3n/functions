@@ -21,14 +21,21 @@
     --font-size: 14px;
 
     /* color styles */
-    --background-color: rgba(242, 242, 242, 1);
-    /* --primary-color: rgba(255, 86, 49, 1); */
-    --secondary-color: rgba(255, 255, 255, 1);
-    --black-color: rgba(0, 0, 0, 1);
-    --white-color: rgba(255, 255, 255, 1);
+    --no-status_status-color: #CACACA;
+    --not-started_status-color: #FFD24B;
+    --in-progress_status-color: #6B9DFF;
+    --completed_status-color: #00BF9C;
+    --important-color: #FF6171;
+
+    --background-color: #F6F8F9;
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --light-grey: #F6F8F9;
+    --grey: #BFBFBF;
 
     /* decorative styles */
-    --outline: var(--black-color) 1px solid;
+    /* --outline: #CACACA 1px solid; */
+    --drop-shadow: drop-shadow(0px 0px 10px #e8e8e8);
     --blur: blur(5px);
     --gap: 1rem;
     --border-radius: 5px;
@@ -49,9 +56,8 @@ body {
 
 h2 {
     font-family: var(--heading-font);
-    font-weight: 600;
+    font-weight: 500;
     font-size: calc(var(--font-size) * 1.75);
-    text-transform: uppercase;
 }
 
 /* .gradient-blob_background {
