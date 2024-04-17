@@ -91,11 +91,17 @@
     align-items: center;
 }
 
-.close-toggle {
+.todos_content-toggles {
+    display: flex;
+    flex-direction: row;
+    column-gap: calc(var(--gap) * .5);
+}
+
+.close-toggle, .important-toggle {
     outline: var(--outline);
-    /* border-radius: 100rem; */
+    border-radius: 100rem;
     padding: 1%;
-    width: 15px;
+    min-width: 15px;
     height: 15px;
     text-align: center;
 
@@ -252,8 +258,12 @@
         display: none;
     }
 
-    .close-toggle {
+    .close-toggle, .important-toggle {
         cursor: pointer;
+    }
+
+    .important-toggle:hover {
+        transition: var(--hover-effect);
     }
 
     .close-toggle:hover {
