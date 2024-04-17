@@ -118,28 +118,6 @@ function createToDo() {
     todoDiv.appendChild(importantToggle);
 
 
-    // Return the toggled important todo into the default state //
-    function isImportantTodo(element) {
-        return element.parentNode.firstChild === element;
-    }
-
-    function toggleImportance() {
-        const todoDiv = this.closest(".todos");
-        const parentStatus = this.closest(".status");
-        const todoItemsContainer = parentStatus.querySelector(".to-do-items");
-
-        if (isImportantTodo(todoDiv) && todoDiv.style.backgroundColor === "rgba(255, 210, 75, .25)") {
-            todoItemsContainer.appendChild(todoDiv);
-            todoDiv.style.backgroundColor = "";
-        }
-
-        else {
-            todoItemsContainer.prepend(todoDiv);
-            todoDiv.style.backgroundColor = '#FFD24B';
-        }
-    }
-
-
     // Recreate the .todos content with the up and down arrows //
     const toggleButtonDiv = document.createElement("div");
     toggleButtonDiv.classList.add("toggle-button", "todos-mobile");
