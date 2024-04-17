@@ -1,12 +1,12 @@
 #add-button {
-    background-color: var(--white-color);
+    background-color: var(--background-color);
     padding: var(--gap);
     width: 100%;
     height: auto;
     text-align: center;
-    border-top: var(--outline);
-    border-bottom: var(--outline);
-    margin-bottom: var(--gap_todo-column);
+    outline: var(--outline);
+    border-radius: 10000px;
+    margin-bottom: var(--gap);
 }
 
 .to-do_function {
@@ -40,13 +40,35 @@
 }
 
 .status > header {
-    border-bottom: var(--outline);
     padding: var(--gap);
-    background-color: var(--black-color);
-    color: var(--white-color);
+    color: var(--dark-grey-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
 
-    border-top-left-radius: var(--border-radius);
-    border-top-right-radius: var(--border-radius);
+    display: flex; 
+    flex-direction: column;
+    row-gap: var(--gap_todo-column);
+}
+
+.status_category {
+    height: 5px;
+    width: 100%;
+}
+
+.no-status > header > .status_category {
+    background-color: var(--no-status_status-color);
+}
+
+.not-started > header > .status_category {
+    background-color: var(--not-started_status-color);
+}
+
+.in-progress > header > .status_category {
+    background-color: var(--in-progress_status-color);
+}
+
+.completed > header > .status_category {
+    background-color: var(--completed_status-color);
 }
 
 .status > div {
@@ -59,6 +81,8 @@
     display: flex;
     column-gap: var(--gap);
     margin-bottom: var(--gap_todo-column);
+    outline: var(--outline);
+    border-radius: var(--border-radius);
 }
 
 .toggle-button {
@@ -229,6 +253,7 @@
     
     .status_no-status, .status_not-started, .status_in-progress, .status_completed {
         width: 25%;
+        
     }
 
     .todos {

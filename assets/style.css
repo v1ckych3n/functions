@@ -21,20 +21,21 @@
     --font-size: 14px;
 
     /* color styles */
-    --no-status_status-color: #CACACA;
-    --not-started_status-color: #FFD24B;
+    --not-started_status-color: #CACACA;
     --in-progress_status-color: #6B9DFF;
     --completed_status-color: #00BF9C;
-    --important-color: #FF6171;
+    --important-color: #FFD24B;
+    --delete-color: #FF6171;
 
     --background-color: #F6F8F9;
-    --black-color: #000000;
+    --black-color: #4c4c4c;
     --white-color: #FFFFFF;
-    --light-grey: #F6F8F9;
+    --light-grey: #f0f0f0;
     --grey: #BFBFBF;
+    --dark-grey-color: #989898;
 
     /* decorative styles */
-    /* --outline: #CACACA 1px solid; */
+    --outline: var(--light-grey) 2px solid;
     --drop-shadow: drop-shadow(0px 0px 10px #e8e8e8);
     --blur: blur(5px);
     --gap: 1rem;
