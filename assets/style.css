@@ -27,7 +27,7 @@
     --important-color: #FFD24B;
     --delete-color: #FF6171;
 
-    --background-color: #F6F8F9;
+    --background-color: #FEFDE7;
     --black-color: #4c4c4c;
     --white-color: #FFFFFF;
     --light-grey: #f0f0f0;
@@ -64,12 +64,16 @@ h2 {
 
 .grid-background {
     margin: 0;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
 
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
 }
 
