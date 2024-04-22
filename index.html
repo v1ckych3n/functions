@@ -10,6 +10,7 @@
         <link href="assets/style_to-do.css" rel="stylesheet">
         <link href="assets/style_motivational-buddy.css" rel="stylesheet">
         <link href="assets/reset.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -26,11 +27,11 @@
                 <div class="motivational-buddy_quotes">
                     <p id="motivational-quotes"></p>
                  </div>
-            </div> -->
+            </div>
             
 
 
-            <!-- <div id="moving-buddy-handle">
+            <div id="moving-buddy-handle">
                 <img src="assets/images/cat.svg" alt="pixelated cat" class="pixel-cat">
                 <div class="pixelated-speech-bubble_container">
                     <img src="assets/images/speech-bubble.svg" alt="pixelated speech bubble" class="pixelated-speech-bubble">
@@ -76,7 +77,9 @@
                     </header> -->
 
                     <div class="to-do-items" id="no_status">
-                        <button id="add-button" data-target-popup="#popup">+ Add Task</button>
+                        <button id="add-button" data-target-popup="#popup">
+                            <h2>+ Add Task</h2>
+                        </button>
 
                         <div class="todos" draggable="true">
                             <div class="toggle-button todos-mobile">
@@ -154,6 +157,21 @@
 
                 <div id="overlay"></div>
             </div>
+        </div>
+
+        <!-- Add To-Do Item Popups -->
+        <div class="popup" id="popup">
+            <div class="popup_header">
+                <h2>Add a To-Do Item</h2>
+                <button class="popup_close-button close_popup" id="close-pop-up">&times;</button>
+            </div>
+            
+            <div class="popup_content">
+                <input type="text" id="to-do_input">
+                <input type="submit" value="Add To-Do" id="todo_submit">
+            </div>
+
+            <div id="overlay"></div>
         </div>
 
 

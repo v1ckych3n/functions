@@ -40,7 +40,7 @@ function dragOver(e) {
 }
 
 function dragEnter() {
-    this.style.backgroundColor = "black";
+    this.style.backgroundColor = "var(--light-grey)";
     
     console.log("dragEnter");
 }

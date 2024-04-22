@@ -11,7 +11,7 @@
 /* TABLET MEDIA QUERY */
 @media (min-width: 768px) {
     #moving-buddy {
-        display: none;
+        /* display: none; */
 
         position: absolute;
         left: 0;

@@ -5,7 +5,6 @@
     height: auto;
     text-align: center;
     outline: var(--outline);
-    margin-bottom: var(--gap);
 }
 
 .to-do_function {
@@ -49,25 +48,25 @@
 
 .no-status > header {
     background-color: var(--no-status_status-color);
-    mix-blend-mode: multiply;
+    mix-blend-mode: var(--blend);
     border-bottom: var(--outline);
 }
 
 .not-started > header {
     background-color: var(--not-started_status-color);
-    mix-blend-mode: multiply;
+    mix-blend-mode: var(--blend);
     border-bottom: var(--outline);
 }
 
 .in-progress > header {
     background-color: var(--in-progress_status-color);
-    mix-blend-mode: multiply;
+    mix-blend-mode: var(--blend);
     border-bottom: var(--outline);
 }
 
 .completed > header {
     background-color: var(--completed_status-color);
-    mix-blend-mode: multiply;
+    mix-blend-mode: var(--blend);
     border-bottom: var(--outline);
 }
 
@@ -134,9 +133,9 @@
 .popup {
     width: 35vw;
     height: auto;
-    position: fixed;
-    top: -50%;
-    left: 50%;
+    /* position: fixed; */
+    /* top: -50%;
+    left: 50%; */
     z-index: 1000;
     
     transform: translate(-50%, -50%);
@@ -146,9 +145,9 @@
     background-color: var(--background-color);
 }
 
-.popup.active {
+/* .popup.active {
     top: 35vh;
-}
+} */
 
 .popup_header {
     display: flex;
@@ -232,7 +231,6 @@
         color: var(--white-color);
         transition: var(--hover-effect);
         cursor: pointer;
-        border-top: 1px solid var(--white-color);
     }
     
     .to-do_container {

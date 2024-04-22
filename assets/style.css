@@ -36,19 +36,18 @@
     --delete-color: #FF6171;
 
     --background-color: #FEFDE7;
-    --black-color: #4c4c4c;
+    --primary-color: #0039A6;
     --white-color: #FFFFFF;
     --light-grey: #f0f0f0;
-    --grey: #BFBFBF;
-    --dark-grey-color: #989898;
 
     /* decorative styles */
-    --outline: var(--black-color) 1px solid;
+    --outline: var(--primary-color) 1px solid;
     --drop-shadow: drop-shadow(0px 0px 10px #e8e8e8);
     --blur: blur(5px);
     --gap: 10px;
     --gap_todo-column: .5rem;
     --border-radius: 5px;
+    --blend: multiply;
 
     /* animation styles */
     --hover-effect: ease-in-out 250ms;
@@ -61,8 +60,7 @@ body {
     background-color: var(--background-color);
     font-size: var(--font-size);
     font-family: var(--primary-font);
-    display: swap;
-    color: var(--black-color);
+    color: var(--primary-color);
 }
 
 h2 {
@@ -100,7 +98,7 @@ h2 {
     left: 10px;
 
     outline: var(--outline);
-    background: var(--black-color);
+    background: var(--primary-color);
     color: var(--white-color);
     padding: var(--gap);
     cursor: pointer;
