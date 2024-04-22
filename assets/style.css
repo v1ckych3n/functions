@@ -5,6 +5,8 @@
     src: url(/assets/fonts/Mateur.ttf);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
+
 /* @font-face {
     font-family: Nohemi-Regular;
     src: url(/assets/fonts/Nohemi-Regular.otf);
@@ -59,6 +61,7 @@ body {
     background-color: var(--background-color);
     font-size: var(--font-size);
     font-family: var(--primary-font);
+    display: swap;
     color: var(--black-color);
 }
 
