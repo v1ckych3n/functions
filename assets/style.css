@@ -1,4 +1,10 @@
 /* FIGURE OUT WHY THE TYPEFACE DOESN'T WORK ON PUBLISHED SITE */
+
+@font-face {
+    font-family: Mateur;
+    src: url(/assets/fonts/Mateur.ttf);
+}
+
 /* @font-face {
     font-family: Nohemi-Regular;
     src: url(/assets/fonts/Nohemi-Regular.otf);
@@ -15,9 +21,9 @@
 } */
 
 :root {
-    --primary-font: Helvetica;
-    --heading-font: Helvetica;
-    --motivational-buddy_font: Helvetica;
+    --primary-font: Mateur;
+    --heading-font: Mateur;
+    /* --motivational-buddy_font: Helvetica; */
     --font-size: 14px;
 
     /* color styles */
@@ -35,10 +41,10 @@
     --dark-grey-color: #989898;
 
     /* decorative styles */
-    --outline: var(--light-grey) 2px solid;
+    --outline: var(--black-color) 1px solid;
     --drop-shadow: drop-shadow(0px 0px 10px #e8e8e8);
     --blur: blur(5px);
-    --gap: 1rem;
+    --gap: 10px;
     --gap_todo-column: .5rem;
     --border-radius: 5px;
 
@@ -74,6 +80,7 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1000;
     object-fit: cover;
 }
 

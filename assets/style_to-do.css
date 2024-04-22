@@ -1,11 +1,10 @@
 #add-button {
-    background-color: var(--background-color);
+    background-color: var(--black-color);
     padding: var(--gap);
     width: 100%;
     height: auto;
     text-align: center;
     outline: var(--outline);
-    border-radius: 10000px;
     margin-bottom: var(--gap);
 }
 
@@ -16,34 +15,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    filter: var(--drop-shadow);
 }
 
 .to-do_container {
     padding: var(--gap);
-    background-color: var(--white-color);
 
     display: flex;
     flex-direction: column;
     row-gap: var(--gap);
     outline: var(--outline);
-    border-radius: var(--border-radius);
-    
 }
 
 .status {
     width: 100%;
     height: 100%;
-    
-    border-radius: var(--border-radius);
     outline: var(--outline);
 }
 
 .status > header {
     padding: var(--gap);
-    color: var(--dark-grey-color);
-    border-radius: var(--border-radius);
+    color: var(--black-color);
     overflow: hidden;
 
     display: flex; 
@@ -83,7 +74,6 @@
     column-gap: var(--gap);
     margin-bottom: var(--gap_todo-column);
     outline: var(--outline);
-    border-radius: var(--border-radius);
 }
 
 .toggle-button {
