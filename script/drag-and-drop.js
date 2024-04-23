@@ -231,4 +231,4 @@ deleteToDo.forEach(button => {
 
 // CREDITS //
 // shoutout to Rodrigo for helping me figure out that there needs to be two .parentElement //
-// credits: https://www.youtube.com/watch?v=m3StLl-H4CY (for creating the draggable todos item//
+// credits: https://www.youtube.com/watch?v=m3StLl-H4CY (for creating the draggable todos item and drag eventListener) //
