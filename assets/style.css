@@ -29,7 +29,7 @@
     --font-size: 14px;
 
     /* color styles */
-    --not-started_status-color: #CACACA;
+    --not-started_status-color: #cd5c5c;
     --in-progress_status-color: #6B9DFF;
     --completed_status-color: #00BF9C;
     --important-color: #FFD24B;
