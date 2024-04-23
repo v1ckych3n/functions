@@ -2,7 +2,8 @@
 
 @font-face {
     font-family: Mateur;
-    src: url(/assets/fonts/Mateur.ttf);
+    src: url(../assets/fonts/Mateur.ttf);
+    weight: 400;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap');
@@ -29,9 +30,9 @@
     --font-size: 14px;
 
     /* color styles */
-    --not-started_status-color: #cd5c5c;
-    --in-progress_status-color: #6B9DFF;
-    --completed_status-color: #00BF9C;
+    --not-started_status-color: #ff9696;
+    --in-progress_status-color: #85aeff;
+    --completed_status-color: #0bd7b2;
     --important-color: #FFD24B;
     --delete-color: #FF6171;
 
