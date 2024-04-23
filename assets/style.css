@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: Mateur;
-    src: url(../assets/fonts/Mateur.ttf);
+    src: url(/fonts/Mateur.ttf);
     weight: 400;
 }
 
@@ -33,7 +33,7 @@
     --not-started_status-color: #ff9696;
     --in-progress_status-color: #85aeff;
     --completed_status-color: #0bd7b2;
-    --important-color: #FFD24B;
+    --highlighter-color: #FFD24B;
     --delete-color: #FF6171;
 
     --background-color: #FEFDE7;
