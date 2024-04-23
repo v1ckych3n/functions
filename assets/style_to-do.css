@@ -133,7 +133,7 @@
 
 /* Add To-Do Popup styles */
 .popup {
-    width: 35vw;
+    width: 100%;
     height: auto;
     /* position: fixed; */
     /* top: -50%;
