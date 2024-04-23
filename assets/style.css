@@ -64,6 +64,10 @@ body {
     color: var(--primary-color);
 }
 
+h1 {
+    font-size: calc(var(--font-size) * 4);
+}
+
 h2 {
     font-family: var(--heading-font);
     font-weight: 500;
