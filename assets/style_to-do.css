@@ -1,5 +1,4 @@
 #add-button {
-    background-color: var(--black-color);
     padding: var(--gap);
     width: 100%;
     height: auto;
@@ -9,13 +8,12 @@
 
 .to-do_function {
     min-width: 100vw;
-    min-height: 100vh;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    row-gap: calc(var(--gap) * 3);
     align-items: center;
-    column-gap: calc(var(--gap) * 3);
-    padding: calc(var(--gap) * 5);
+    padding: calc(var(--gap) * 2);
 }
 
 .to-do_container {
@@ -219,6 +217,15 @@
         color: var(--white-color);
         transition: var(--hover-effect);
         cursor: pointer;
+    }
+
+    .to-do_function {
+        min-height: 100vh;
+        
+        flex-direction: row;
+        column-gap: calc(var(--gap) * 3);
+        justify-content: center;
+        padding: calc(var(--gap) * 5);
     }
     
     .to-do_container {

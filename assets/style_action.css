@@ -1,9 +1,10 @@
 .action_container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    
-    height: 80vh;
+    row-gap: var(--gap);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 
@@ -26,5 +27,11 @@
 /* DESKTOP MEDIA QUERY */
 /* DESKTOP MEDIA QUERY */
 @media (min-width: 1280px) {
+    .action_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     
+        height: 80vh;
+    }
 }
