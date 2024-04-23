@@ -24,6 +24,7 @@
     --light-grey: #f0f0f0;
 
     /* decorative styles */
+    --outline: 1px solid var(--primary-color);
     --gap: 10px;
     --gap_todo-column: .5rem;
     --blend: multiply;
@@ -33,10 +34,6 @@
 }
 
 body {
-    display: flex;
-    flex-direction: row;
-    grid-template-columns: 1fr 1fr;
-
     background-color: var(--background-color);
     font-size: var(--font-size);
     font-family: var(--primary-font);
@@ -107,8 +104,5 @@ h2 {
 /* DESKTOP MEDIA QUERY */
 /* DESKTOP MEDIA QUERY */
 @media (min-width: 1280px) {
-    .gradient-blob_background {
-        top: 0rem;
-        right: -20rem;
-    }
+    
 }
