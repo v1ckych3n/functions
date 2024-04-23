@@ -14,6 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    column-gap: calc(var(--gap) * 3);
     padding: calc(var(--gap) * 5);
 }
 
@@ -142,8 +143,7 @@
     /* transform: translate(-50%, -50%); */
     transition: 0.3s ease-in-out;
     outline: var(--outline);
-    border-radius: var(--border-radius);
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
 }
 
 /* .popup.active {
