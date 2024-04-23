@@ -18,6 +18,8 @@
 
 .to-do_container {
     padding: var(--gap);
+    /* height: 100%; */
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -40,11 +42,6 @@
     flex-direction: column;
     row-gap: var(--gap_todo-column);
 }
-
-/* .status_category {
-    height: 5px;
-    width: 100%;
-} */
 
 .no-status > header {
     background-color: var(--no-status_status-color);
@@ -72,9 +69,17 @@
 
 .todos {
     background-color: #ffffff;
+    height: 100%;
     position: relative;
+    padding: var(--gap);
+    
     display: flex;
+    flex-direction: row;
     column-gap: var(--gap);
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
     outline: var(--outline);
 }
 
@@ -86,7 +91,7 @@
     align-content: center;
     align-items: center;
 
-    background: var(--black-color);
+    background: var(--primary-color);
     color: var(--white-color);
     font-size: calc(var(--font-size) * 1.5);
     padding: calc(var(--gap) * .5);
