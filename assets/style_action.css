@@ -1,0 +1,6 @@
+.action_container {
+    display: flex;
+    justify-content: space-between;
+    
+    height: 80vh;
+}
