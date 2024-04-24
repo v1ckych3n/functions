@@ -98,6 +98,6 @@ h2 {
 /* DESKTOP MEDIA QUERY */
 @media (min-width: 1280px) {
     h1 {
-        font-size: calc(var(--font-size) * 4);
+        font-size: calc(var(--font-size) * 3.75);
     }
 }

@@ -20,6 +20,7 @@ celebrationTime.addEventListener('drop', () => {
     jsConfetti.addConfetti({
         confettiRadius: 6,
         confettiNumber: 1000,
+        
     })
 });
 
