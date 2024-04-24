@@ -10,6 +10,7 @@
     --primary-font: Mateur;
     --heading-font: Mateur;
     --font-size: 14px;
+    --line-height: 120%;
 
     /* color styles */
     --not-started_status-color: #ff9696;
