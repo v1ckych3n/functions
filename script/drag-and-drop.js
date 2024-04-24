@@ -184,18 +184,18 @@ function createToDo() {
             currentDiv.parentNode.insertAfter(currentDiv.nextElementSibling, currentDiv);
         }
     });
-}
 
-function moveTodoDiv(todoDiv, direction) {
-    const statusDivs = Array.from(document.querySelectorAll('.to-do-items'));
-    const currentStatusIndex = statusDivs.indexOf(todoDiv.parentElement);
-
-    if (direction === 'up' && currentStatusIndex > 0) {
-        statusDivs[currentStatusIndex - 1].appendChild(todoDiv);
-    }
-
-    else if (direction === 'down' && currentStatusIndex < statusDivs.length - 1) {
-        statusDivs[currentStatusIndex + 1].insertBefore(todoDiv, statusDivs[currentStatusIndex + 1].firstChild);
+    function moveTodoDiv(todoDiv, direction) {
+        const statusDivs = Array.from(document.querySelectorAll('.to-do-items'));
+        const currentStatusIndex = statusDivs.indexOf(todoDiv.parentElement);
+    
+        if (direction === 'up' && currentStatusIndex > 0) {
+            statusDivs[currentStatusIndex - 1].appendChild(todoDiv);
+        }
+    
+        else if (direction === 'down' && currentStatusIndex < statusDivs.length - 1) {
+            statusDivs[currentStatusIndex + 1].insertBefore(todoDiv, statusDivs[currentStatusIndex + 1].firstChild);
+        }
     }
 }
 
@@ -204,22 +204,23 @@ function moveTodoDiv(todoDiv, direction) {
 
 
 // FUNCTION THREE:Removing the "+ Add To-Do" popup window //
-const remove_pop_up = document.getElementById("close-pop-up");
+// KILLED THIS FUNCTION OFF //
+// const remove_pop_up = document.getElementById("close-pop-up");
 
-remove_pop_up.addEventListener("click", closePop);
+// remove_pop_up.addEventListener("click", closePop);
 
-function closePop() {
-    remove_pop_up.parentElement.parentElement.classList.remove('active');
-}
+// function closePop() {
+//     remove_pop_up.parentElement.parentElement.classList.remove('active');
+// }
 
 
-const deleteToDo = document.querySelectorAll(".close-toggle");
+// const deleteToDo = document.querySelectorAll(".close-toggle");
 
-deleteToDo.forEach(button => {
-    button.addEventListener("click", () => {
-        button.parentElement.style.display = "none";
-    });
-});
+// deleteToDo.forEach(button => {
+//     button.addEventListener("click", () => {
+//         button.parentElement.style.display = "none";
+//     });
+// });
 
 
 
