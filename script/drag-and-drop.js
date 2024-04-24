@@ -63,40 +63,43 @@ function dragDrop() {
 
 
 // FUNCTION TWO (MOST IMPORTANT): Add to-do items popup window appears when clicked on the "+ Add To Do" button//
-const popup = document.querySelectorAll("[data-target-popup]");
-const close_popup = document.querySelectorAll(".close_popup");
-const overlay = document.getElementById("overlay");
+// KILLED OFF THE POPUP FUNCTION //
 
-popup.forEach((popup) => {
-    popup.addEventListener("click", () => {
-        document.querySelector(popup.dataset.targetPopup).classList.add("active");
-        overlay.classList.remove("active");
-    });
-});
+// const popup = document.querySelectorAll("[data-target-popup]");
+// const close_popup = document.querySelectorAll(".close_popup");
+// const overlay = document.getElementById("overlay");
 
-close_popup.forEach((popup) => {
-    popup.addEventListener("click", () => {
-        const popup = popup.closest(".popup");
-        popup.classList.remove("active");
-        overlay.classList.remove("active");
-    })
-});
+// popup.forEach((popup) => {
+//     popup.addEventListener("click", () => {
+//         document.querySelector(popup.dataset.targetPopup).classList.add("active");
+//         overlay.classList.remove("active");
+//     });
+// });
 
-popup.onclick = (event) => {
-    if (event.target == overlay) {
-        const popup = document.querySelectorAll(".popup");
-        popup.forEach((popup) => popup.classList.remove("active"));
-        overlay.classList.remove("active");
-    }
-}
+// close_popup.forEach((popup) => {
+//     popup.addEventListener("click", () => {
+//         const popup = popup.closest(".popup");
+//         popup.classList.remove("active");
+//         overlay.classList.remove("active");
+//     })
+// });
 
+// popup.onclick = (event) => {
+//     if (event.target == overlay) {
+//         const popup = document.querySelectorAll(".popup");
+//         popup.forEach((popup) => popup.classList.remove("active"));
+//         overlay.classList.remove("active");
+//     }
+// 
+
+
+
+// Creating new todo content //
 const todo_submit = document.getElementById("todo_submit");
 
 todo_submit.addEventListener("click", createToDo);
 
 
-
-// Creating new todo content //
 function createToDo() {
     const todoContainer = document.getElementById("no_status");
     const inputVal = document.getElementById("to-do_input").value;
@@ -217,13 +220,13 @@ function createToDo() {
 // }
 
 
-// const deleteToDo = document.querySelectorAll(".close-toggle");
+const deleteToDo = document.querySelectorAll(".close-toggle");
 
-// deleteToDo.forEach(button => {
-//     button.addEventListener("click", () => {
-//         button.parentElement.style.display = "none";
-//     });
-// });
+deleteToDo.forEach(button => {
+    button.addEventListener("click", () => {
+        button.parentElement.style.display = "none";
+    });
+});
 
 
 

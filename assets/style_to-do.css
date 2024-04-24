@@ -139,7 +139,6 @@
 .popup {
     width: 100%;
     height: auto;
-    z-index: 1000;
     
     transition: 0.3s ease-in-out;
     outline: var(--outline);
