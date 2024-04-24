@@ -67,7 +67,7 @@
 }
 
 .todos {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     position: relative;
     padding: var(--gap);
     

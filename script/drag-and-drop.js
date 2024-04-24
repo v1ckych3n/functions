@@ -58,7 +58,13 @@ function dragDrop() {
     console.log("dragDrop");
 }
 
+function setTodoStyling(todos) {
+    todos.style.color="";
 
+    if (todos.parentElement.classList.contains('not-started')) {
+        todos.style.backgroundColor = "#ff9696";
+    }
+}
 
 
 
@@ -121,12 +127,15 @@ function createToDo() {
     // Recreate the .todos content with the up and down arrows //
     const toggleButtonDiv = document.createElement("div");
     toggleButtonDiv.classList.add("toggle-button", "todos-mobile");
+
     const upArrowButton = document.createElement("button");
     upArrowButton.classList.add("up-arrow");
     upArrowButton.innerHTML = "&#8963;";
+
     const downArrowButton = document.createElement("button");
     downArrowButton.classList.add("down-arrow");
     downArrowButton.innerHTML = "&#8963;";
+
     toggleButtonDiv.appendChild(upArrowButton);
     toggleButtonDiv.appendChild(downArrowButton);
     todoDiv.appendChild(toggleButtonDiv);
