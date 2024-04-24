@@ -58,13 +58,7 @@ function dragDrop() {
     console.log("dragDrop");
 }
 
-function setTodoStyling(todos) {
-    todos.style.color="";
 
-    if (todos.parentElement.classList.contains('not-started')) {
-        todos.style.backgroundColor = "#ff9696";
-    }
-}
 
 
 
@@ -135,7 +129,7 @@ function createToDo() {
     const downArrowButton = document.createElement("button");
     downArrowButton.classList.add("down-arrow");
     downArrowButton.innerHTML = "&#8963;";
-
+    
     toggleButtonDiv.appendChild(upArrowButton);
     toggleButtonDiv.appendChild(downArrowButton);
     todoDiv.appendChild(toggleButtonDiv);
