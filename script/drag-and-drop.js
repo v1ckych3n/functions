@@ -220,7 +220,7 @@ function createToDo() {
 // }
 
 
-const deleteToDo = document.querySelectorAll(".close-toggle");
+const deleteToDo = document.querySelectorAll(".close_post-it");
 
 deleteToDo.forEach(button => {
     button.addEventListener("click", () => {
