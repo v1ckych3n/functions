@@ -157,16 +157,12 @@ function createToDo() {
     closeSpan.addEventListener("click", function() {
         todoDiv.style.display = "none";
     });
-
-
-    // I need to close the popup overlay after inputing the content //
-    document.getElementById("popup").classList.remove("active");
-    document.getElementById("overlay").classList.add("active");
+    
 
 
     // Toggle up and down button feature for MOBILE ONLY //
     upArrowButton.addEventListener("click", function() {
-        moveTodoDiv(this.parentElement.parentElement, 'down');
+        moveTodoDiv(this.parentElement.parentElement, 'up');
     });
 
     downArrowButton.addEventListener("click", function() {
@@ -174,20 +170,20 @@ function createToDo() {
     });
 
 
-    // upArrowButton.addEventListener("click", function() {
-    //     let currentDiv = this.parentElement.parentElement;
+    upArrowButton.addEventListener("click", function() {
+        let currentDiv = this.parentElement.parentElement;
 
-    //     if (currentDiv.previousElementSibling) {
-    //         currentDiv.parentNode.insertBefore(currentDiv, currentDiv.previousElementSibling);
-    //     }
-    // });
+        if (currentDiv.previousElementSibling) {
+            currentDiv.parentNode.insertBefore(currentDiv, currentDiv.previousElementSibling);
+        }
+    });
 
-    // downArrowButton.addEventListener("click", function() {
-    //     let currentDiv = this.parentElement.parentElement;
-    //     if (currentDiv.nextElementSibling) {
-    //         currentDiv.parentNode.insertBefore(currentDiv.nextElementSibling, currentDiv);
-    //     }
-    // });
+    downArrowButton.addEventListener("click", function() {
+        let currentDiv = this.parentElement.parentElement;
+        if (currentDiv.nextElementSibling) {
+            currentDiv.parentNode.insertAfter(currentDiv.nextElementSibling, currentDiv);
+        }
+    });
 }
 
 function moveTodoDiv(todoDiv, direction) {
